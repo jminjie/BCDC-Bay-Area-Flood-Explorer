@@ -1,0 +1,93 @@
+LAYER
+    NAME    consequence_highway_vehicle
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_highways
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    VALIDATION
+        "default_twl" "0"
+        "twl"         "^[0-9]+$"
+    END
+    METADATA
+        "wms_title"         "Vehicles AADT"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    PROCESSING "NATIVE_FILTER=twl='%twl%'"
+    CLASS
+        EXPRESSION ([veh_aadt_num_av] > 161000)
+        STYLE
+            COLOR 121 53 24
+            WIDTH 3
+        END
+    END
+    CLASS
+        EXPRESSION ([veh_aadt_num_av] > 48500 AND [veh_aadt_num_av] <= 161000)
+        STYLE
+            COLOR 190 92 49
+            WIDTH 3
+        END
+    END
+    CLASS
+        EXPRESSION ([veh_aadt_num_av] >= 18475 AND [veh_aadt_num_av] <= 48500)
+        STYLE
+            COLOR 237 110 34
+            WIDTH 3
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_highway_truck
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_highways
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    VALIDATION
+        "default_twl" "0"
+        "twl"         "^[0-9]+$"
+    END
+    METADATA
+        "wms_title"         "Trucks AADT"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    PROCESSING "NATIVE_FILTER=twl='%twl%'"
+    CLASS
+        EXPRESSION ([truckaadt_num_av] > 5900)
+        STYLE
+            COLOR 121 53 24
+            WIDTH 3
+        END
+    END
+    CLASS
+        EXPRESSION ([truckaadt_num_av] > 2133 AND [truckaadt_num_av] <= 5900)
+        STYLE
+            COLOR 190 92 49
+            WIDTH 3
+        END
+    END
+    CLASS
+        EXPRESSION ([truckaadt_num_av] >= 623 AND [truckaadt_num_av] <= 2133)
+        STYLE
+            COLOR 237 110 34
+            WIDTH 3
+        END
+    END
+END

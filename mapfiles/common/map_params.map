@@ -1,0 +1,21 @@
+STATUS ON
+CONFIG "MS_ERRORFILE" "/opt/bayareaviewer/mapfiles/ms_error"
+DEBUG  0 
+# spherical [web] mercator
+UNITS  meters
+PROJECTION 
+    "init=epsg:3857"
+END
+# for map mode, extent fit to california
+EXTENT -13914032.3291 3794844.8913 -12591932.3291 5303244.8913
+SIZE   1624 1950
+IMAGETYPE png
+OUTPUTFORMAT
+    NAME      "png"
+    DRIVER    AGG/PNG
+    MIMETYPE  "image/png"
+    IMAGEMODE RGBA
+    EXTENSION "png"
+END
+# increase maxsize so single-tile requests don't fail
+MAXSIZE 4096

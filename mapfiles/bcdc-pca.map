@@ -1,0 +1,23 @@
+LAYER
+    NAME    pca
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM pca_boundaries"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Priority Conservation Areas"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        STYLE
+            COLOR 115 178 115
+        END
+    END
+END

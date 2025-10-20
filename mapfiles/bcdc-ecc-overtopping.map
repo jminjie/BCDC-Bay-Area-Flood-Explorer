@@ -1,0 +1,206 @@
+LAYER
+    NAME    eccovertopping12
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=12 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 12"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping24
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=24 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 24"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping36
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=36 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 36"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping83
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=83 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 83"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping0flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=0 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 0 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping12flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=12 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 12 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping24flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=24 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 24 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping36flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=36 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 36 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    eccovertopping83flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_overtopping WHERE orig_layer=83 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Overtopping 83 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END

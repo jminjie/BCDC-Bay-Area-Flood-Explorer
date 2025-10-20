@@ -1,0 +1,7 @@
+{
+    "name": "bcdc-slr",
+    "dependencies": {
+        "requirejs": "~2.2.0",
+        "fs-extra": "~4.0.2"
+    }
+}

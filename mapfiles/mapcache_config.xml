@@ -1,0 +1,1851 @@
+<mapcache>
+  
+  <errors>report</errors>
+  
+  <service type="wms" enabled="true">
+    <full_wms>forward</full_wms>
+  </service>
+  <service type="wmts" enabled="true"/>
+  <service type="tms" enabled="true"/>
+  
+  <format name="PNG_FAST" type ="PNG">
+    <compression>fast</compression>
+    <colors>256</colors>
+  </format>
+  
+  <default_format>PNG_FAST</default_format>
+
+  <cache name="tilecache" type="disk">
+    <base>/bcdc-data/tiles/</base>
+    <symlink_blank/>
+  </cache>
+
+  <lock_dir>/bcdc-data/tiles/tmp</lock_dir>
+
+  <!-- OVERTOPPING SOURCE DEFINITIONS -->
+  <source name="overtopping12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping48source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping48</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping52source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping52</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping66source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping66</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping77source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping77</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping84source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping84</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping96source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping96</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="overtopping108source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>overtopping108</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+
+  <!-- ECC OVERTOPPING SOURCE DEFINITIONS -->
+  <source name="eccovertopping0flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping0flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping12flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping12flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping24flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping24flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping36flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping36flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping83source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping83</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccovertopping83flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccovertopping83flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  
+  <!-- INUNDATION SOURCE DEFINITIONS -->
+  <source name="inundation12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation48source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation48</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation52source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation52</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation66source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation66</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation77source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation77</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation84source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation84</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation96source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation96</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="inundation108source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>inundation108</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  
+  <!-- ECC INUNDATION SOURCE DEFINITIONS -->
+  <source name="eccinundation0flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation0flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation12flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation12flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation24flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation24flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation36flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation36flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation83source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation83</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="eccinundation83flood100source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>eccinundation83flood100</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  
+  <!-- CONSEQUENCE HOUSING SOURCE DEFINITIONS -->
+  <source name="consqhousing12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing48source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_48</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing52source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_52</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing66source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_66</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing77source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_77</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing84source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_84</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing96source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_96</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqhousing108source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_housing_108</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  
+  <!-- CONSEQUENCE JOBS SOURCE DEFINITIONS -->
+  <source name="consqjobs12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs48source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_48</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs52source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_52</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs66source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_66</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs77source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_77</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs84source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_84</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs96source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_96</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqjobs108source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_jobs_108</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  
+  <!-- CONSEQUENCE VULNERABLE COMMUNITIES CONTAMINATION SOURCE DEFINITIONS -->
+  <source name="consqvulcomcontam12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam48source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_48</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam52source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_52</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam66source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_66</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam77source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_77</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam84source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_84</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam96source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_96</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomcontam108source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_contam_108</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  
+  <!-- CONSEQUENCE VULNERABLE COMMUNITIES SOCIAL SOURCE DEFINITIONS -->
+  <source name="consqvulcomsocial12source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_12</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial24source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_24</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial36source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_36</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial48source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_48</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial52source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_52</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial66source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_66</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial77source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_77</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial84source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_84</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial96source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_96</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  <source name="consqvulcomsocial108source" type="wms">
+    <http>
+      <url>http://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv?</url>
+    </http>
+    <getmap>
+      <params>
+        <FORMAT>image/png</FORMAT>
+        <LAYERS>consequence_vulcom_social_108</LAYERS>
+        <MAP>/opt/slrviewer/mapfiles/bcdc.map</MAP>
+      </params>
+    </getmap>
+  </source>
+  
+  <!-- OVERTOPPING TILESET DEFINITIONS -->
+  <tileset name="overtopping12cache">
+    <metadata>
+      <title>Overtopping 12</title>
+      <abstract>Overtopping 12</abstract>
+    </metadata>
+    <source>overtopping12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping24cache">
+    <metadata>
+      <title>Overtopping 24</title>
+      <abstract>Overtopping 24</abstract>
+    </metadata>
+    <source>overtopping24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping36cache">
+    <metadata>
+      <title>Overtopping 36</title>
+      <abstract>Overtopping 36</abstract>
+    </metadata>
+    <source>overtopping36source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping48cache">
+    <metadata>
+      <title>Overtopping 48</title>
+      <abstract>Overtopping 48</abstract>
+    </metadata>
+    <source>overtopping48source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping52cache">
+    <metadata>
+      <title>Overtopping 52</title>
+      <abstract>Overtopping 52</abstract>
+    </metadata>
+    <source>overtopping52source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping66cache">
+    <metadata>
+      <title>Overtopping 66</title>
+      <abstract>Overtopping 66</abstract>
+    </metadata>
+    <source>overtopping66source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping77cache">
+    <metadata>
+      <title>Overtopping 77</title>
+      <abstract>Overtopping 77</abstract>
+    </metadata>
+    <source>overtopping77source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping84cache">
+    <metadata>
+      <title>Overtopping 84</title>
+      <abstract>Overtopping 84</abstract>
+    </metadata>
+    <source>overtopping84source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping96cache">
+    <metadata>
+      <title>Overtopping 96</title>
+      <abstract>Overtopping 96</abstract>
+    </metadata>
+    <source>overtopping96source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="overtopping108cache">
+    <metadata>
+      <title>Overtopping 108</title>
+      <abstract>Overtopping 108</abstract>
+    </metadata>
+    <source>overtopping108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  
+  <!-- ECC OVERTOPPING TILESET DEFINITIONS -->
+  <tileset name="eccovertopping0flood100cache">
+    <metadata>
+      <title>ECC Overtopping 0 Flood 100</title>
+      <abstract>ECC Overtopping 0 Flood 100</abstract>
+    </metadata>
+    <source>eccovertopping0flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping12cache">
+    <metadata>
+      <title>ECC Overtopping 12</title>
+      <abstract>ECC Overtopping 12</abstract>
+    </metadata>
+    <source>eccovertopping12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping12flood100cache">
+    <metadata>
+      <title>ECC Overtopping 12 Flood 1000</title>
+      <abstract>ECC Overtopping 12 Flood 1000</abstract>
+    </metadata>
+    <source>eccovertopping12flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping24cache">
+    <metadata>
+      <title>ECC Overtopping 24</title>
+      <abstract>ECC Overtopping 24</abstract>
+    </metadata>
+    <source>eccovertopping24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping24flood100cache">
+    <metadata>
+      <title>ECC Overtopping 24 Flood 1000</title>
+      <abstract>ECC Overtopping 24 Flood 1000</abstract>
+    </metadata>
+    <source>eccovertopping24flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping36cache">
+    <metadata>
+      <title>ECC Overtopping 36</title>
+      <abstract>ECC Overtopping 36</abstract>
+    </metadata>
+    <source>eccovertopping36source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping36flood100cache">
+    <metadata>
+      <title>ECC Overtopping 36 Flood 1000</title>
+      <abstract>ECC Overtopping 36 Flood 1000</abstract>
+    </metadata>
+    <source>eccovertopping36flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping83cache">
+    <metadata>
+      <title>ECC Overtopping 83</title>
+      <abstract>ECC Overtopping 83</abstract>
+    </metadata>
+    <source>eccovertopping83source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccovertopping83flood100cache">
+    <metadata>
+      <title>ECC Overtopping 83 Flood 1000</title>
+      <abstract>ECC Overtopping 83 Flood 1000</abstract>
+    </metadata>
+    <source>eccovertopping83flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  
+  <!-- INUNDATION TILESET DEFINITIONS -->
+  <tileset name="inundation12cache">
+    <metadata>
+      <title>Inundation 12</title>
+      <abstract>Inundation 12</abstract>
+    </metadata>
+    <source>inundation12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation24cache">
+    <metadata>
+      <title>Inundation 24</title>
+      <abstract>Inundation 24</abstract>
+    </metadata>
+    <source>inundation24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation36cache">
+    <metadata>
+      <title>Inundation 36</title>
+      <abstract>Inundation 36</abstract>
+    </metadata>
+    <source>inundation36source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation48cache">
+    <metadata>
+      <title>Inundation 48</title>
+      <abstract>Inundation 48</abstract>
+    </metadata>
+    <source>inundation48source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation52cache">
+    <metadata>
+      <title>Inundation 52</title>
+      <abstract>Inundation 52</abstract>
+    </metadata>
+    <source>inundation52source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation66cache">
+    <metadata>
+      <title>Inundation 66</title>
+      <abstract>Inundation 66</abstract>
+    </metadata>
+    <source>inundation66source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation77cache">
+    <metadata>
+      <title>Inundation 77</title>
+      <abstract>Inundation 77</abstract>
+    </metadata>
+    <source>inundation77source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation84cache">
+    <metadata>
+      <title>Inundation 84</title>
+      <abstract>Inundation 84</abstract>
+    </metadata>
+    <source>inundation84source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation96cache">
+    <metadata>
+      <title>Inundation 96</title>
+      <abstract>Inundation 96</abstract>
+    </metadata>
+    <source>inundation96source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="inundation108cache">
+    <metadata>
+      <title>Inundation 108</title>
+      <abstract>Inundation 108</abstract>
+    </metadata>
+    <source>inundation108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+
+  <!-- ECC INUNDATION TILESET DEFINITIONS -->
+  <tileset name="eccinundation0flood100cache">
+    <metadata>
+      <title>ECC Inundation 0 Flood 100</title>
+      <abstract>ECC Inundation 0 Flood 100</abstract>
+    </metadata>
+    <source>eccinundation0flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation12cache">
+    <metadata>
+      <title>ECC Inundation 12</title>
+      <abstract>ECC Inundation 12</abstract>
+    </metadata>
+    <source>eccinundation12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation12flood100cache">
+    <metadata>
+      <title>ECC Inundation 12 Flood 100</title>
+      <abstract>ECC Inundation 12 Flood 100</abstract>
+    </metadata>
+    <source>eccinundation12flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation24cache">
+    <metadata>
+      <title>ECC Inundation 24</title>
+      <abstract>ECC Inundation 24</abstract>
+    </metadata>
+    <source>eccinundation24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation24flood100cache">
+    <metadata>
+      <title>ECC Inundation 24 Flood 100</title>
+      <abstract>ECC Inundation 24 Flood 100</abstract>
+    </metadata>
+    <source>eccinundation24flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation36cache">
+    <metadata>
+      <title>ECC Inundation 36</title>
+      <abstract>ECC Inundation 36</abstract>
+    </metadata>
+    <source>eccinundation36source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation36flood100cache">
+    <metadata>
+      <title>ECC Inundation 36 Flood 100</title>
+      <abstract>ECC Inundation 36 Flood 100</abstract>
+    </metadata>
+    <source>eccinundation36flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation83cache">
+    <metadata>
+      <title>ECC Inundation 83</title>
+      <abstract>ECC Inundation 83</abstract>
+    </metadata>
+    <source>eccinundation83source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="eccinundation83flood100cache">
+    <metadata>
+      <title>ECC Inundation 83 Flood 100</title>
+      <abstract>ECC Inundation 83 Flood 100</abstract>
+    </metadata>
+    <source>eccinundation83flood100source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+
+  <!-- CONSEQUENCE HOUSING TILESET DEFINITIONS -->
+  <tileset name="consqhousing12cache">
+    <metadata>
+      <title>Consequence Housing 12</title>
+      <abstract>Consequence Housing 12</abstract>
+    </metadata>
+    <source>consqhousing12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing24cache">
+    <metadata>
+      <title>Consequence Housing 24</title>
+      <abstract>Consequence Housing 24</abstract>
+    </metadata>
+    <source>consqhousing24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing36cache">
+    <metadata>
+      <title>Consequence Housing 36</title>
+      <abstract>Consequence Housing 36</abstract>
+    </metadata>
+    <source>consqhousing108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing42cache">
+    <metadata>
+      <title>Consequence Housing 42</title>
+      <abstract>Consequence Housing 42</abstract>
+    </metadata>
+    <source>consqhousing42source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing55cache">
+    <metadata>
+      <title>Consequence Housing 55</title>
+      <abstract>Consequence Housing 55</abstract>
+    </metadata>
+    <source>consqhousing55source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing66cache">
+    <metadata>
+      <title>Consequence Housing 66</title>
+      <abstract>Consequence Housing 66</abstract>
+    </metadata>
+    <source>consqhousing66source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing77cache">
+    <metadata>
+      <title>Consequence Housing 77</title>
+      <abstract>Consequence Housing 77</abstract>
+    </metadata>
+    <source>consqhousing77source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing84cache">
+    <metadata>
+      <title>Consequence Housing 84</title>
+      <abstract>Consequence Housing 84</abstract>
+    </metadata>
+    <source>consqhousing84source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing96cache">
+    <metadata>
+      <title>Consequence Housing 96</title>
+      <abstract>Consequence Housing 96</abstract>
+    </metadata>
+    <source>consqhousing108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqhousing108cache">
+    <metadata>
+      <title>Consequence Housing 108</title>
+      <abstract>Consequence Housing 108</abstract>
+    </metadata>
+    <source>consqhousing108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+
+  <!-- CONSEQUENCE JOBS TILESET DEFINITIONS -->
+  <tileset name="consqjobs12cache">
+    <metadata>
+      <title>Consequence Jobs 12</title>
+      <abstract>Consequence Jobs 12</abstract>
+    </metadata>
+    <source>consqjobs12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs24cache">
+    <metadata>
+      <title>Consequence Jobs 24</title>
+      <abstract>Consequence Jobs 24</abstract>
+    </metadata>
+    <source>consqjobs24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs36cache">
+    <metadata>
+      <title>Consequence Jobs 36</title>
+      <abstract>Consequence Jobs 36</abstract>
+    </metadata>
+    <source>consqjobs108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs42cache">
+    <metadata>
+      <title>Consequence Jobs 42</title>
+      <abstract>Consequence Jobs 42</abstract>
+    </metadata>
+    <source>consqjobs42source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs55cache">
+    <metadata>
+      <title>Consequence Jobs 55</title>
+      <abstract>Consequence Jobs 55</abstract>
+    </metadata>
+    <source>consqjobs55source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs66cache">
+    <metadata>
+      <title>Consequence Jobs 66</title>
+      <abstract>Consequence Jobs 66</abstract>
+    </metadata>
+    <source>consqjobs66source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs77cache">
+    <metadata>
+      <title>Consequence Jobs 77</title>
+      <abstract>Consequence Jobs 77</abstract>
+    </metadata>
+    <source>consqjobs77source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs84cache">
+    <metadata>
+      <title>Consequence Jobs 84</title>
+      <abstract>Consequence Jobs 84</abstract>
+    </metadata>
+    <source>consqjobs84source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs96cache">
+    <metadata>
+      <title>Consequence Jobs 96</title>
+      <abstract>Consequence Jobs 96</abstract>
+    </metadata>
+    <source>consqjobs108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqjobs108cache">
+    <metadata>
+      <title>Consequence Jobs 108</title>
+      <abstract>Consequence Jobs 108</abstract>
+    </metadata>
+    <source>consqjobs108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  
+  <!-- CONSEQUENCE VULNERABLE COMMUNITIES CONTAMINATION TILESET DEFINITIONS -->
+  <tileset name="consqvulcomcontam12cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 12</title>
+      <abstract>Consequence Vulnerable Communities Contamination 12</abstract>
+    </metadata>
+    <source>consqvulcomcontam12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam24cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 24</title>
+      <abstract>Consequence Vulnerable Communities Contamination 24</abstract>
+    </metadata>
+    <source>consqvulcomcontam24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam36cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 36</title>
+      <abstract>Consequence Vulnerable Communities Contamination 36</abstract>
+    </metadata>
+    <source>consqvulcomcontam108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam42cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 42</title>
+      <abstract>Consequence Vulnerable Communities Contamination 42</abstract>
+    </metadata>
+    <source>consqvulcomcontam42source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam55cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 55</title>
+      <abstract>Consequence Vulnerable Communities Contamination 55</abstract>
+    </metadata>
+    <source>consqvulcomcontam55source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam66cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 66</title>
+      <abstract>Consequence Vulnerable Communities Contamination 66</abstract>
+    </metadata>
+    <source>consqvulcomcontam66source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam77cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 77</title>
+      <abstract>Consequence Vulnerable Communities Contamination 77</abstract>
+    </metadata>
+    <source>consqvulcomcontam77source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam84cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 84</title>
+      <abstract>Consequence Vulnerable Communities Contamination 84</abstract>
+    </metadata>
+    <source>consqvulcomcontam84source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam96cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 96</title>
+      <abstract>Consequence Vulnerable Communities Contamination 96</abstract>
+    </metadata>
+    <source>consqvulcomcontam108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomcontam108cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Contamination 108</title>
+      <abstract>Consequence Vulnerable Communities Contamination 108</abstract>
+    </metadata>
+    <source>consqvulcomcontam108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  
+  <!-- CONSEQUENCE VULNERABLE COMMUNITIES SOCIAL TILESET DEFINITIONS -->
+  <tileset name="consqvulcomsocial12cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 12</title>
+      <abstract>Consequence Vulnerable Communities Social 12</abstract>
+    </metadata>
+    <source>consqvulcomsocial12source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial24cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 24</title>
+      <abstract>Consequence Vulnerable Communities Social 24</abstract>
+    </metadata>
+    <source>consqvulcomsocial24source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial36cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 36</title>
+      <abstract>Consequence Vulnerable Communities Social 36</abstract>
+    </metadata>
+    <source>consqvulcomsocial108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial42cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 42</title>
+      <abstract>Consequence Vulnerable Communities Social 42</abstract>
+    </metadata>
+    <source>consqvulcomsocial42source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial55cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 55</title>
+      <abstract>Consequence Vulnerable Communities Social 55</abstract>
+    </metadata>
+    <source>consqvulcomsocial55source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial66cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 66</title>
+      <abstract>Consequence Vulnerable Communities Social 66</abstract>
+    </metadata>
+    <source>consqvulcomsocial66source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial77cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 77</title>
+      <abstract>Consequence Vulnerable Communities Social 77</abstract>
+    </metadata>
+    <source>consqvulcomsocial77source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial84cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 84</title>
+      <abstract>Consequence Vulnerable Communities Social 84</abstract>
+    </metadata>
+    <source>consqvulcomsocial84source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial96cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 96</title>
+      <abstract>Consequence Vulnerable Communities Social 96</abstract>
+    </metadata>
+    <source>consqvulcomsocial108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+  <tileset name="consqvulcomsocial108cache">
+    <metadata>
+      <title>Consequence Vulnerable Communities Social 108</title>
+      <abstract>Consequence Vulnerable Communities Social 108</abstract>
+    </metadata>
+    <source>consqvulcomsocial108source</source>
+    <cache>tilecache</cache>
+    <format>PNG_FAST</format>
+    <TRANSPARENT>true</TRANSPARENT>
+    <grid>GoogleMapsCompatible</grid>
+  </tileset>
+
+</mapcache>

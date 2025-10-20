@@ -1,0 +1,26 @@
+LAYER
+    NAME     focusareas
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM focusareas
+            ) AS subquery USING UNIQUE gid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Focus Areas"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        STYLE
+            OUTLINECOLOR 0 0 0
+            OUTLINEWIDTH 0.1
+        END
+    END
+END

@@ -1,0 +1,124 @@
+==============================================================================================================
+CLONING REPOSITORY
+==============================================================================================================
+    To clone a fresh copy of the repository from git:
+        git clone <URL-TO-REPO> <DIRECTORY-TO-CLONE-IN>
+        cd <DIRECTORY-TO-CLONE-IN>
+    
+    Note the directory where the repo is cloned to is important. It will be refered to throughout this 
+    document as [APP_DIR].
+    
+    
+==============================================================================================================
+CONFIGURING REPOSITORY
+==============================================================================================================
+    Edit the ini files in the `configs` directory of the repository. Note comments therein specifying whether 
+    you should use absolute or relative paths.
+    
+        MapServer parameters MUST be updated for new locations/installs as it has absolute path reference.
+        
+        Google API key (`google_api_key`) is used for geolocation search (via Google Geocoding API).
+        
+        Note the `geo_upload_dir` path. It may be good to pair this with a cronjob to occasionally cleanup 
+        this location. Also, this directory must give write access to `www-data` user or errors will occur.
+        
+        The maximum upload size (`max_file_size`) DOES NOT override PHP's. It should be the same or lower than
+        PHP's upload file size limit (by default, 2MB) or PHP will silently fail (as this error is difficult 
+        to catch). Edit the upload file size limit in Apache's php.ini config, if necessary.
+    
+    You may want to update the `wms_onlineresource` parameter in `[APP_DIR]/mapfiles/bcdc.map` to reflect the 
+    correct URL and location. However, this is totally optional, as for now these layers are not meant to be 
+    used as public-service. That is to say, not updating this won't break any functionality in this app.
+    
+    
+==============================================================================================================
+BUILDING
+==============================================================================================================
+    To build, go to repo location and use command: `node build -env=prod`
+    
+    The `-env` option may be set to "prod" (or "production"), "staging", or "dev" (or "development"). The 
+    default behavior if `-env` is not explicitly set is "dev". The different build processes for each 
+    environment are outlined below:
+    
+        +-------------+-------------+-------------+-----------------------------------------------------+
+        | ENVIRONMENT | COMPILES JS | CONFIG      | OUTPUT DIRECTORY                                    |
+        +-------------+-------------+-------------+-----------------------------------------------------+
+        | development |     no      | dev.ini     | /var/www/explorer-devls.adaptingtorisingtides.org   |
+        +-------------+-------------+-------------+-----------------------------------------------------+
+        | staging     |     yes     | staging.ini | /var/www/explorer-staging.adaptingtorisingtides.org |
+        +-------------+-------------+-------------+-----------------------------------------------------+
+        | production  |     yes     | prod.ini    | /var/www/explorer.adaptingtorisingtides.org         |
+        +-------------+-------------+-------------+-----------------------------------------------------+
+    
+    Add simply the directive `-pp` to password protect the build. It will use `[APP_DIR]\.htpasswd` for 
+    credentials. Make sure you create this file and populate a few credentials as it is not provided in the 
+    original repo.
+    
+    You may also add the directive `-o=<DIRECTORY>` to the build command to manually override the output 
+    directory to the one specified.
+   
+    NOTE: Current setup still requires that any builds link back to these directories. Changing the location 
+    of the repository will break these links. That is, the following locations are ACTIVE components of all 
+    builds from this repo.
+    
+        [APP_DIR]/php
+        [APP_DIR]/configs
+        [APP_DIR]/mapfiles
+        [APP_DIR]/tmp/geoup
+        
+    As a consequence, updating via git will also update these locations for any build script built off this 
+    location. As such, be mindful of changes made to PHP scripts, configs, or mapfiles.
+    
+    Note the last location `tmp/geoup` can be changed in the config (`geo_upload_dir` parameter). If just 
+    copying the repo, you may also need to create this dir and assign ownership to www-data or else the upload
+    scripts will error.
+    
+    TODO: Update this so production build at least might use specially copied directory. Otherwise we need to 
+    create copies for the repository for production and staging -- which might actually just be the easier 
+    solution for now.
+    
+    
+==============================================================================================================
+CONFIGURING DOWNLOADS
+==============================================================================================================
+    Requires Apache module: XSendFile
+        Ubuntu command: install libapache2-mod-xsendfile
+        
+    Module must be enabled in site config. Additionally the directory where downloads reside (as specified in 
+    downloads config) must be specified as the `XSendFilePath` in the site config.
+    
+    Download config in repository at `[APP_DIR]/configs/download.ini`. Change top level location. All 
+    downloadable files must be underneath that location. Add values to [Map] section as needed.
+    
+    To enable new download links, in the downloads table (`[APP_DIR]/src/pages/data.html`) add a new row, 
+    following the existing structure under '#download-table' element. Add 'downloadable' class to element to 
+    add download functionality on clicking said element. Add 'dl-key' attribute with key matching variable in 
+    the [Map] section  of download config.
+    
+    Justification. This is a very roundabout way of serving downloads, but:
+    
+      - Users can't share the download link. Each download is served on demand via PHP from a location that is 
+        not accessible publicly. Additionally the download is served in a 2-part process, first prepping the
+        download, then fetching it. The actual location of the file is kept hidden from the client.
+        
+      - The above point hopefully prevents or at least deters spreading of the download URL and linking the 
+        download URL on an external site (though still technically possible, it's a lot more work). Users have
+        to come to this website to download. Additionally we can potentially add code to throttle/limit 
+        downloads, if that becomes necessary in the future.
+        
+      - Using the config to map keys to actual filenames prevents anyone from editing the DOM or javascript to
+        maliciously download a file they shouldn't normally be able to access. Only files linked in the [Map] 
+        section are available for download.
+        
+      - Since PHP is sending the file, we use XSendFile instead of a built-in PHP function (like 
+        file_get_contents), which would be resource heavy if it were a large file. XSendFile allows PHP to 
+        pass file-transfer handling back to Apache server.
+        
+    
+==============================================================================================================
+CONFIGURING URLS
+==============================================================================================================
+    Commonly used URLs are stored in `[APP_DIR]/configs/urls.ini`. Simply update them here they will be 
+    updated anywhere they are used in the site. Note this does not discern between dev, staging, or production
+    builds, all versions link to this config and will be affected.
+    

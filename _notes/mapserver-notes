@@ -1,0 +1,61 @@
+==============================================================================================================
+MAPSERVER
+==============================================================================================================
+    Mapserver: /var/www/mapserver.adaptingtorisingtides.org
+    
+    Inundation Rasters:  /bcdc-data/inundrasts
+    Connection Scripts:  /bcdc-data/dbconns
+    
+    MapServer is accessed in browser via: https://mapserver.adaptingtorisingtides.org/cgi-bin/mapserv
+    
+    Map path can be set in configs. By default, location to main/production is located in 
+    /opt/slrviewer/mapfiles/ which is the "parent" repo. You can point staging/dev to the forked repos in
+    /opt/bayareaviewer/mapfiles/ for example, to test mapfiles changes without affecting prod. Eventually 
+    though, changes in child/forked repos will have to be propagated into the parent repo to affect the prod 
+    mapfile location.
+    
+    Script alias setup to cgi-bin scripts (at `/usr/lib/cgi-bin`) with a symlink therein to mapserv binary. 
+    This allows accessing MapServer from web. 
+        See: http://www.mapserver.org/installation/unix.html#installation
+        
+    NOTE: With current setup as subdomains under adaptingtorisingtides.org, CORS is not necessary. However, if
+    setup ever changes to differing main URLs, MapServer site will need CORS enabled.
+        See: https://enable-cors.org/server_apache.html
+    
+    NOTE: As currently setup, MapServer uses local_config.map which always connects to production. There is 
+    not, as of yet, a clean way of connecting to development except manually setting up the connection file in
+    the mapfile for said layer.
+    
+    
+==============================================================================================================
+MAPCACHE
+==============================================================================================================
+    MapCache Location:     /bcdc-data/tiles
+    MapCache Config File:  /opt/slrviewer/mapfiles/mapcache_config.xml
+       -SYMLINKED BY:      /bcdc-data/tiles/mapcache_config.xml
+    
+    MapCache is accessed in browser via:  https://mapserver.adaptingtorisingtides.org/mapcache
+    
+    MapCache config must be pointed to in Apache site config.
+        See: http://mapserver.org/mapcache/install.html#apache-module-specific-instructions
+    
+    Adding layers to MapCache should be fairly self-explanatory when looking at the mapcache config file. Note
+    the various hard-coded paths to the mapserver URL and main mapfile. These must be kept up to date.
+    
+    Seeding tiles is done by the following command (broken into multiple lines for readability but should be 
+    single command):
+    
+        mapcache_seed -c /bcdc-data/tiles/mapcache_config.xml 
+                      -t overtopping12cache 
+                      -e -13692297.37,4439106.79,-13469658.39,4650301.84 
+                      -z 9,17
+    
+    Adjust -c if mapcache config file location has changed. Adjust -t for tile layer. Given properties for -e 
+    and -z limit extend and zoom respectively to same constricted extent and zoom for the application. This 
+    doesn't restrict the tileset entirely to though parameters, but simply limits the pre-seeding.
+    
+    Note `sudo` is likely needed to run mapcache_seed command. So after seeding, ensure you recursive change 
+    ownership of all tiles and tile directories back to www-data as it will likely create several things under
+    root ownership.
+    
+        sudo chown -R www-data:www-data /bcdc-data/tiles

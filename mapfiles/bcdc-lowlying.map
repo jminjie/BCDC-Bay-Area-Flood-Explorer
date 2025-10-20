@@ -1,0 +1,219 @@
+LAYER
+    NAME    lowlying12
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=12
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 12"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying24
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=24
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 24"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying36
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=36
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 36"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying48
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=48
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 48"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying52
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=52
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 52"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying66
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=66
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 66"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying77
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=77
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 77"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying84
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=84
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 84"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying96
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=96
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 96"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    lowlying108
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_lowlying WHERE orig_id=108
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Baywide Lowlying 108"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END

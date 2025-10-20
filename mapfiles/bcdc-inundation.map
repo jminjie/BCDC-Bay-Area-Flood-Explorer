@@ -1,0 +1,209 @@
+LAYER
+    NAME           inundation12
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_12_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 12"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation24
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_24_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 24"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation36
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_36_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 36"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation48
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_48_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 48"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation52
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_52_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 52"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation66
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_66_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 66"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation77
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_77_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 77"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation84
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_84_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 84"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation96
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_96_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 77"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           inundation108
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/BayArea_inundation_rast_108_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Inundation 108"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END

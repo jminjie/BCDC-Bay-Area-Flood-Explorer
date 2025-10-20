@@ -1,0 +1,24 @@
+==============================================================================================================
+APPLICATION SETUP
+==============================================================================================================
+    Repository:            /opt/slrviewer
+    Downloadables:         /bcdc-data/downloads
+    
+    Staging Site:          /var/www/explorer-staging.adaptingtorisingtides.org
+    Production Site:       /var/www/explorer.adaptingtorisingtides.org
+    Mapserver Site:        /var/www/mapserver.adaptingtorisingtides.org
+    
+    Inundation Rasters:    /bcdc-data/inundrasts
+    Connection Scripts:    /bcdc-data/dbconns
+    
+    MapCache Location:     /bcdc-data/tiles
+    MapCache Config File:  /opt/slrviewer/mapfiles/mapcache_config.xml
+       -SYMLINKED BY:      /bcdc-data/tiles/mapcache_config.xml
+
+==============================================================================================================
+APACHE SETUP
+==============================================================================================================
+    Libraries used: PHP 7, MapServer 7, MapCache, OGR2OGR (GDAL)
+    Mods used:      Deflate, Rewrite, XSendFile
+    Site configs:   /etc/apache2/sites-available
+    

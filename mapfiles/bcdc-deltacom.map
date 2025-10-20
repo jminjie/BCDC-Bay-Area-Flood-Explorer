@@ -1,0 +1,32 @@
+LAYER
+    NAME  deltacom
+    DATA /bcdc-data/shp/delta_communities_webmerc.shp
+    TYPE point
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Delta Communities"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    LABELITEM          "label"
+    LABELCACHE         ON
+    PROCESSING         "LABEL_NO_CLIP=True"
+    CLASS
+        LABEL
+            TYPE         truetype
+            ANTIALIAS    true
+            ALIGN        center
+            SIZE         9
+            COLOR        50 50 50
+            OUTLINECOLOR 255 255 255
+            OUTLINEWIDTH 2
+            POSITION     auto
+            PARTIALS     false
+            MINDISTANCE  300
+            BUFFER       10
+        END
+    END
+END

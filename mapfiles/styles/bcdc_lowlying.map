@@ -1,0 +1,13 @@
+CLASS
+    STYLE
+        OUTLINECOLOR 80 220 12
+        WIDTH 1.5
+    END
+    STYLE
+        SYMBOL 'hatch'
+        COLOR  80 220 12
+        ANGLE  135
+        SIZE   4
+        WIDTH  2
+    END
+END

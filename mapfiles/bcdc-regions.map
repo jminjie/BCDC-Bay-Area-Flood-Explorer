@@ -1,0 +1,143 @@
+# symbol definitions
+SYMBOL
+  NAME "hatch"
+  TYPE HATCH
+END
+
+# ocean/delta hash out (old)
+LAYER
+    NAME bayoceanhash
+    DATA /bcdc-data/inundrasts/bayoceanhash2.5.shp
+    TYPE polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "No Data in Oceans or Delta"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        STYLE
+            SYMBOL  'hatch'
+            COLOR   142 124 124
+            ANGLE   45
+            SIZE    8
+            WIDTH   4
+            OPACITY 50
+        END
+    END
+END
+
+# ocean/delta hash out (new)
+LAYER
+    NAME oceandeltahash
+    DATA /bcdc-data/shp/bayoceanhash3.shp
+    TYPE polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "No Data in Oceans or Delta"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        STYLE
+            SYMBOL  'hatch'
+            COLOR   142 124 124
+            ANGLE   45
+            SIZE    8
+            WIDTH   4
+            OPACITY 50
+        END
+    END
+END
+
+# Eastern Contra Costa
+LAYER
+    NAME ecchash
+    DATA /bcdc-data/shp/eastern-contra-costa.shp
+    TYPE polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Eastern Contra Costa"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        STYLE
+            COLOR   158 197 66
+            OPACITY 50
+        END
+        STYLE
+            OUTLINECOLOR 158 197 66
+            WIDTH 3
+            OPACITY 80
+        END
+    END
+END
+
+# SF Bay
+LAYER
+    NAME sfbayhash
+    DATA /bcdc-data/shp/sfbayhash.shp
+    TYPE polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "SF Bay"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        STYLE
+            COLOR 101 132 128   
+            OPACITY 60
+        END
+    END
+END
+
+# legal delta
+LAYER
+    NAME legaldelta
+    DATA /bcdc-data/shp/legaldelta.shp
+    TYPE polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Legal Delta"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        STYLE
+            OUTLINECOLOR 30 30 30
+            WIDTH 3 
+        END
+    END
+END

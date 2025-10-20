@@ -1,0 +1,133 @@
+CLASS
+    EXPRESSION ([ot_ft] = 0)
+    STYLE
+        MAXSCALEDENOM 20000
+        COLOR 178 178 178
+        WIDTH 4
+    END
+    STYLE
+        MINSCALEDENOM 20000
+        MAXSCALEDENOM 50000
+        COLOR 178 178 178
+        WIDTH 2.5
+    END
+    STYLE
+        MINSCALEDENOM 50000
+        COLOR 178 178 178
+        WIDTH 1
+    END
+END
+CLASS
+    EXPRESSION ([ot_ft] > 0 AND [ot_ft] <= 1)
+    STYLE
+        MAXSCALEDENOM 20000
+        COLOR 245 245 0
+        WIDTH 4
+    END
+    STYLE
+        MINSCALEDENOM 20000
+        MAXSCALEDENOM 50000
+        COLOR 245 245 0
+        WIDTH 2.5
+    END
+    STYLE
+        MINSCALEDENOM 50000
+        COLOR 245 245 0
+        WIDTH 1
+    END
+END
+CLASS
+    EXPRESSION ([ot_ft] > 1 AND [ot_ft] <= 2)
+    STYLE
+        MAXSCALEDENOM 20000
+        COLOR 245 204 0
+        WIDTH 4
+    END
+    STYLE
+        MINSCALEDENOM 20000
+        MAXSCALEDENOM 50000
+        COLOR 245 204 0
+        WIDTH 2.5
+    END
+    STYLE
+        MINSCALEDENOM 50000
+        COLOR 245 204 0
+        WIDTH 1
+    END
+END
+CLASS
+    EXPRESSION ([ot_ft] > 2 AND [ot_ft] <= 3)
+    STYLE
+        MAXSCALEDENOM 20000
+        COLOR 245 163 0
+        WIDTH 4
+    END
+    STYLE
+        MINSCALEDENOM 20000
+        MAXSCALEDENOM 50000
+        COLOR 245 163 0
+        WIDTH 2.5
+    END
+    STYLE
+        MINSCALEDENOM 50000
+        COLOR 245 163 0
+        WIDTH 1
+    END
+END
+CLASS
+    EXPRESSION ([ot_ft] > 3 AND [ot_ft] <= 4)
+    STYLE
+        MAXSCALEDENOM 20000
+        COLOR 245 82 0
+        WIDTH 4
+    END
+    STYLE
+        MINSCALEDENOM 20000
+        MAXSCALEDENOM 50000
+        COLOR 245 82 0
+        WIDTH 2.5
+    END
+    STYLE
+        MINSCALEDENOM 50000
+        COLOR 245 82 0
+        WIDTH 1
+    END
+END
+CLASS
+    EXPRESSION ([ot_ft] > 4 AND [ot_ft] <= 5)
+    STYLE
+        MAXSCALEDENOM 20000
+        COLOR 245 41 0
+        WIDTH 4
+    END
+    STYLE
+        MINSCALEDENOM 20000
+        MAXSCALEDENOM 50000
+        COLOR 245 41 0
+        WIDTH 2.5
+    END
+    STYLE
+        MINSCALEDENOM 50000
+        COLOR 245 41 0
+        WIDTH 1
+    END
+END
+CLASS
+    EXPRESSION ([ot_ft] > 5)
+    STYLE
+        MAXSCALEDENOM 20000
+        COLOR 230 0 169
+        WIDTH 4
+    END
+    STYLE
+        MINSCALEDENOM 20000
+        MAXSCALEDENOM 50000
+        COLOR 230 0 169
+        WIDTH 2.5
+    END
+    STYLE
+        MINSCALEDENOM 50000
+        COLOR 230 0 169
+        WIDTH 1
+    END
+END 

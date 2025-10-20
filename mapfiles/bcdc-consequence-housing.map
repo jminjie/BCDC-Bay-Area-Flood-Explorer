@@ -1,0 +1,449 @@
+LAYER
+    NAME    consequence_housing_12
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl12_res_units_2010] > 0 AND [twl12_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl12_res_units_2010] >= 85 AND [twl12_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl12_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_24
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl24_res_units_2010] > 0 AND [twl24_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl24_res_units_2010] >= 85 AND [twl24_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl24_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_36
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl36_res_units_2010] > 0 AND [twl36_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl36_res_units_2010] >= 85 AND [twl36_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl36_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_48
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl48_res_units_2010] > 0 AND [twl48_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl48_res_units_2010] >= 85 AND [twl48_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl48_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_52
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl52_res_units_2010] > 0 AND [twl52_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl52_res_units_2010] >= 85 AND [twl52_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl52_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_66
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl66_res_units_2010] > 0 AND [twl66_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl66_res_units_2010] >= 85 AND [twl66_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl66_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_77
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl77_res_units_2010] > 0 AND [twl77_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl77_res_units_2010] >= 85 AND [twl77_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl77_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_84
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl84_res_units_2010] > 0 AND [twl84_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl84_res_units_2010] >= 85 AND [twl84_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl84_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_96
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl96_res_units_2010] > 0 AND [twl96_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl96_res_units_2010] >= 85 AND [twl96_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl96_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_housing_108
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_housingjobs_parcels2
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Residential Units 2010 Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl108_res_units_2010] > 0 AND [twl108_res_units_2010] < 85)
+        STYLE
+            COLOR        16 158 205
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl108_res_units_2010] >= 85 AND [twl108_res_units_2010] < 335)
+        STYLE
+            COLOR        28 136 157
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl108_res_units_2010] >= 335)
+        STYLE
+            COLOR        6 89 124
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END

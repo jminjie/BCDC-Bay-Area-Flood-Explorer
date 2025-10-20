@@ -1,0 +1,469 @@
+LAYER
+    NAME    consequence_vulcom_social_12
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='12'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_24
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='24'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_36
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='36'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_48
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='48'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_52
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='52'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_66
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='66'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_77
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='77'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_84
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='84'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_96
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='96'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_vulcom_social_108
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_vulcom_social
+                WHERE twl='108'
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Vulnerable Communities - Social Vulnerability"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASSITEM "social_c_class"
+    CLASS
+        EXPRESSION ([sum_res_units_2010] > 2350)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        64 68 89
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 2350 AND [sum_res_units_2010] > 440)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        106 109 144
+        END
+    END
+    CLASS
+        EXPRESSION ([sum_res_units_2010] <= 440 AND [sum_res_units_2010] > 0)
+        STYLE
+            OUTLINECOLOR 40 40 40
+            OUTLINEWIDTH 0.1
+            COLOR        130 141 195
+        END
+    END
+END

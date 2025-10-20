@@ -1,0 +1,206 @@
+LAYER
+    NAME    ecclowlying12
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=12 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 12"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying24
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=24 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 24"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying36
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=36 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 36"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying83
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=83 AND floodyr100=false
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 83"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying0flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=0 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 0 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying12flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=12 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 12 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying24flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=24 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 24 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying36flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=36 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 36 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END
+
+LAYER
+    NAME    ecclowlying83flood100
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM delta_lowlying WHERE orig_layer=83 AND floodyr100=true
+            ) AS subquery USING UNIQUE fid"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MASK eccmask
+    METADATA
+        "wms_title"         "ECC Lowlying 83 Flood 100"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_lowlying.map"
+END

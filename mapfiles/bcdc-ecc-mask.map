@@ -1,0 +1,14 @@
+LAYER
+    NAME   eccmask
+    TYPE   POLYGON
+    STATUS OFF
+    DATA   "/bcdc-data/shp/contra_costa_county.shp"
+    PROJECTION
+        "init=epsg:3857"
+    END
+    CLASS
+        STYLE
+            COLOR 0 0 0
+        END
+    END
+END

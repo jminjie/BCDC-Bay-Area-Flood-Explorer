@@ -1,0 +1,219 @@
+LAYER
+    NAME    overtopping12
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=12 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Lines 12"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping24
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=24 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Lines 24"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping36
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=36 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 36"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping48
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=48 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 48"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping52
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=52 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 52"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping66
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=66 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 66"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping77
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=77 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 77"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping84
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=84 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 84"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping96
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=96 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 96"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END
+
+LAYER
+    NAME    overtopping108
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM baywide_overtopping_lines2 WHERE orig_layer=108 AND (ot_suppress IS NULL OR NOT ot_suppress)
+            ) AS subquery USING UNIQUE fid"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Alameda Lines 108"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_overtopping.map"
+END

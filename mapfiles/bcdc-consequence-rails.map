@@ -1,0 +1,158 @@
+LAYER
+    NAME    consequence_rail_lines
+    GROUP   consequence_rail
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_rail_lines
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    line
+    PROJECTION
+        "init=epsg:3857"
+    END
+    VALIDATION
+        "default_twl" "0"
+        "twl"         "^[0-9]+$"
+    END
+    METADATA
+        "wms_title"         "Rail Lines: Ridership"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    PROCESSING "NATIVE_FILTER=twl='%twl%'"
+    CLASS
+        EXPRESSION ([ridership] >= 9288)
+        STYLE
+            COLOR 121 53 24
+            WIDTH 3
+        END
+    END
+    CLASS
+        EXPRESSION ([ridership] >= 2264 AND [ridership] < 9288)
+        STYLE
+            COLOR 190 92 49
+            WIDTH 3
+        END
+    END
+    CLASS
+        EXPRESSION ([ridership] > 470 AND [ridership] < 2264)
+        STYLE
+            COLOR 237 110 34
+            WIDTH 3
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_rail_stations
+    GROUP   consequence_rail
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_rail_stations
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MAXSCALEDENOM 50000
+    VALIDATION
+        "default_twl" "0"
+        "twl"         "^[0-9]+$"
+    END
+    METADATA
+        "wms_title"         "Rail Stations: Total Riders"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    PROCESSING "NATIVE_FILTER=twl='%twl%'"
+    CLASS
+        EXPRESSION ([total_ride] >= 4205)
+        STYLE
+            OUTLINECOLOR 15 15 15
+            OUTLINEWIDTH 0.2
+            COLOR        121 53 24
+        END
+    END
+    CLASS
+        EXPRESSION ([total_ride] >= 680 AND [total_ride] < 4205)
+        STYLE
+            OUTLINECOLOR 15 15 15
+            OUTLINEWIDTH 0.2
+            COLOR        190 92 49
+        END
+    END
+    CLASS
+        EXPRESSION ([total_ride] > 0 AND [total_ride] < 680)
+        STYLE
+            OUTLINECOLOR 15 15 15
+            OUTLINEWIDTH 0.2
+            COLOR        237 110 34
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_rail_station_centroids
+    GROUP   consequence_rail
+    INCLUDE "local_config.map"
+    DATA    "sm_centroid FROM (
+                SELECT ogc_fid, twl, total_ride, station_na, agencyname, ST_Centroid(sm_geom) AS sm_centroid 
+                FROM consequence_rail_stations
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    point
+    PROJECTION
+        "init=epsg:3857"
+    END
+    MINSCALEDENOM 50000
+    VALIDATION
+        "default_twl" "0"
+        "twl"         "^[0-9]+$"
+    END
+    METADATA
+        "wms_title"         "Rail Stations: Total Riders"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    PROCESSING "NATIVE_FILTER=twl='%twl%'"
+    CLASS
+        EXPRESSION ([total_ride] >= 4205)
+        STYLE
+            SYMBOL       "circle"
+            SIZE         10
+            OUTLINECOLOR 15 15 15
+            OUTLINEWIDTH 0.2
+            COLOR        121 53 24
+        END
+    END
+    CLASS
+        EXPRESSION ([total_ride] >= 680 AND [total_ride] < 4205)
+        STYLE
+            SYMBOL       "circle"
+            SIZE         10
+            OUTLINECOLOR 15 15 15
+            OUTLINEWIDTH 0.2
+            COLOR        190 92 49
+        END
+    END
+    CLASS
+        EXPRESSION ([total_ride] > 0 AND [total_ride] < 680)
+        STYLE
+            SYMBOL       "circle"
+            SIZE         10
+            OUTLINECOLOR 15 15 15
+            OUTLINEWIDTH 0.2
+            COLOR        237 110 34
+        END
+    END
+END

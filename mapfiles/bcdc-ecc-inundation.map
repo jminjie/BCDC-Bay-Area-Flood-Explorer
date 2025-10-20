@@ -1,0 +1,197 @@
+LAYER
+    NAME           eccinundation12
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_MHHW_12_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 12"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation24
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_MHHW_24_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 24"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation36
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_MHHW_36_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 36"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation83
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_MHHW_83_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 83"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation0flood100
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_100_yr_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 0 Flood 100"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation12flood100
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_100_yr_12_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 12 Flood 100"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation24flood100
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_100_yr_24_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 24 Flood 100"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation36flood100
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_100_yr_36_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 36 Flood 100"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END
+
+LAYER
+    NAME           eccinundation83flood100
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/inundrasts/delta_inundation_rast_100_yr_83_min.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:26910"
+    END
+    MASK eccmask
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "ECC Inundation 83 Flood 100"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    INCLUDE  "styles/bcdc_inundation_alt.map"
+END

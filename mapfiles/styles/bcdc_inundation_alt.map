@@ -1,0 +1,14 @@
+CLASS
+    EXPRESSION ([pixel] > 0 && [pixel] <= 144)
+    STYLE
+        COLORRANGE 182 237 240 9 9 145
+        DATARANGE  0 144
+        RANGEITEM  "[pixel]"
+    END
+END
+CLASS
+    EXPRESSION ([pixel] > 144)
+    STYLE
+        COLOR 9 9 145
+    END
+END

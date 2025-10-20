@@ -1,0 +1,82 @@
+
+The optimizer in RequireJS (which does the concatenating and minifying) has some peculiarities. For reference 
+and to explain some of the weird bits of code patterns you may find, here are some essential notes:
+
+--------------------------------------------------------------------------------------------------------------
+
+1. Nesting require() calls may mean nested require() calls don't get properly recognized by the optimizer (not
+identifying and concatenating the dependencies called). We can actually use this to our advantage to exclude 
+certain libraries being concatenated by the optimizer. However, the behavior isn't really intuitive so I tend
+to avoid this.
+
+Instead, I use the `include` and `exclude` options in the build script. Thus, all application scripts ignore 
+the list of common dependencies. And other isolated scripts that call other application scripts (such as the 
+print script requiring the SLR app), excludes those so we don't redundantly package them (instead to be loaded
+via AMD). Meanwhile the common libraries file (libs.js) explicitly includes all of the common library 
+dependencies.
+
+--------------------------------------------------------------------------------------------------------------
+
+2. The optimizer does not package libraries pulled from the web. E.g. the config gives the URL to JQuery 
+instead of having a local copy. This will not be concatenated by the optimizer.
+
+Thus the common libraries file (libs.js) is build on the RequireJS config file (rconfig.js). As such, the 
+config options and library shortcuts are kept, including URL references. Library shortcuts pointing to local 
+copies are fine though due to point-3 below.
+
+--------------------------------------------------------------------------------------------------------------
+
+3. When concatenated/minified, the RequireJS optimizer forces the alias definitions of the various modules to 
+mimic the file structure in source. Thus, on loading the concatenated/minified js, you can call scripts as if 
+they were in the development environment using the source files.
+
+Combined with the config being included in the common libraries (libs.js -- see point #2), this means that 
+once the common libraries are loaded by RequireJS, those config options are enabled. The most important one 
+being that the basepath/baseURL is set to `js`.
+
+As a consequence, we have to be mindful which module is being required as we call them. If it's included in an
+already loaded, concatenated js file, we call it like we would in development/source (e.g. `js\apps\site.js`).
+If we're calling another module that hasn't been loaded, we at least have to first call the concatenated file 
+it's in by the filepath (also assuming a basepath set to `js` -- e.g. `..\build\site.js`).
+
+Thus, with the production builds, we use nested require() calls to initialize the application. First to load 
+all dependencies with their actual paths, then within that, a require() call as if we were working with the 
+source code. E.g., a source code initialization script of:
+
+    require(["init/site"], function(init) {
+        init();
+    });
+
+..in production becomes:
+
+    require(["build/libs","build/site"], function() {
+        require(["init/site"], function(init) {
+            init();
+        });
+    });
+
+The outer require() calls the two concatenated js files we depend on, one for common libraries and config, the
+other for the site application itself. The inner require() mimics the initialization script in development. 
+However, at this point, all libraries we would need have already been loaded, the alias definitions the 
+optimizer applies lets us mimic the development environment. 
+
+If, however, we needed a module that wasn't concatenated in `build/libs.js` or `build/site.js`, we'd need to 
+load whatever concatenated js file that module is bundled in first.
+
+--------------------------------------------------------------------------------------------------------------
+
+4. In some instances, we will want to start a bit of code (e.g. to prep the loading animations) while still 
+waiting on dependencies to load. This works as is in source code with RequireJS in AMD mode, but after 
+concatenating all scripts, the prep/loading code gets bundled into the concatenated/minified javascript file, 
+it no longer works (since we have to download all the JS anyways before any of the code can run).
+
+Hence, for the site itself, loading screens are built into the HTML/CSS, then only removed once the site 
+application has initialized.
+
+For the SLR Viewer, the loading animation script is started in the <script> snippet within the page's HTML 
+(assuming that having already loaded the site, the common libraries have already been loaded). And a require()
+call is made to load via AMD the separately concatenated/minified SLR script.
+
+Note in production, the call to load the SLR application is nested (see point #3), first to load the 
+concatenated js file for the SLR application, assuming the config has changed the basepath to `js`, then 
+within that, calling the initialization module as if we were working in source.

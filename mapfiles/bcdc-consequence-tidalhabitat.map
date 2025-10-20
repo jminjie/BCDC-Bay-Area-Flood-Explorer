@@ -1,0 +1,475 @@
+LAYER
+    NAME           consequence_tidalmarsh
+    CONNECTIONTYPE OGR
+    DATA           "/bcdc-data/misc/tidal_marsh_3857.tif"
+    TYPE           raster
+    PROJECTION
+        "init=epsg:3857"
+    END
+    PROCESSING "RESAMPLE=NEAREST"
+    METADATA
+        "wms_title"         "Tidal Marsh"
+        "wms_srs"           "EPSG:26910"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([pixel] > 0)
+        STYLE
+            COLOR 115 76 0
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_12
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl12_acres] > 0 AND [twl12_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl12_acres] > 2548.184 AND [twl12_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl12_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_24
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl24_acres] > 0 AND [twl24_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl24_acres] > 2548.184 AND [twl24_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl24_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_36
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl36_acres] > 0 AND [twl36_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl36_acres] > 2548.184 AND [twl36_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl36_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_48
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl48_acres] > 0 AND [twl48_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl48_acres] > 2548.184 AND [twl48_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl48_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_52
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl52_acres] > 0 AND [twl52_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl52_acres] > 2548.184 AND [twl52_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl52_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_66
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl66_acres] > 0 AND [twl66_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl66_acres] > 2548.184 AND [twl66_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl66_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_77
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl77_acres] > 0 AND [twl77_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl77_acres] > 2548.184 AND [twl77_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl77_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_84
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl84_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl84_acres] > 0 AND [twl84_acres] > 2548.184 AND [twl84_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl84_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_96
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl96_acres] > 0 AND [twl96_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl96_acres] > 2548.184 AND [twl96_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl96_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
+
+LAYER
+    NAME    consequence_tidalhabitat_108
+    INCLUDE "local_config.map"
+    DATA    "sm_geom FROM (
+                SELECT * FROM consequence_tidalhabitat
+            ) AS subquery USING UNIQUE ogc_fid USING srid=3857"
+    TYPE    polygon
+    PROJECTION
+        "init=epsg:3857"
+    END
+    METADATA
+        "wms_title"         "Tidal Habitat Impacted"
+        "wms_srs"           "EPSG:3857"
+        "gml_include_items" "all"
+        "gml_featureid"     "FID"
+    END
+    HEADER   "templates/header.html"
+    FOOTER   "templates/footer.html"
+    TEMPLATE "templates/template.html"
+    CLASS
+        EXPRESSION ([twl108_acres] > 0 AND [twl108_acres] <= 2548.184)
+        STYLE
+            COLOR        66 168 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl108_acres] > 2548.184 AND [twl108_acres] <= 4447.739)
+        STYLE
+            COLOR        52 143 88
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+    CLASS
+        EXPRESSION ([twl108_acres] > 4447.739)
+        STYLE
+            COLOR        43 102 71
+            OUTLINECOLOR 110 110 100
+            OUTLINEWIDTH 0.5
+        END
+    END
+END
