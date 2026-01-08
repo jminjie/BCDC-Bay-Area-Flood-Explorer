@@ -515,7 +515,7 @@ define([
                 this.legend.showItem("counties");
                 this.legend.showItem("legaldelta");
                 this.legend.showItem("uda");
-                this.view.$menuButtons.uda.css('visibility', '');
+                //this.view.$menuButtons.uda.css('visibility', '');
                 this.uda.udaLayer.setVisible(true);
                 this.elements.modeToggle.asJQuery().removeClass("on");
                 this.elements.modeToggleLabel.asJQuery().html("Viewing Flooding");
@@ -532,7 +532,7 @@ define([
                 this.legend.hideItem("counties");
                 this.legend.hideItem("legaldelta");
                 this.legend.hideItem("uda");
-                this.view.$menuButtons.uda.css('visibility', 'hidden');
+                //this.view.$menuButtons.uda.css('visibility', 'hidden');
                 this.uda.udaLayer.setVisible(false);
                 this.elements.modeToggle.asJQuery().addClass("on");
                 this.elements.modeToggleLabel.asJQuery().html("Viewing Consequence");

@@ -76,7 +76,7 @@
   z-index: 99;
 }
 #slr-menu {
-  display: none; /* Exploratorium modification */
+  display: flex;
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
@@ -86,6 +86,17 @@
 }
 
 /* general menu items */
+.default-view-menu-item {
+  position: absolute;
+  top: 20px;
+  right: -230px;
+  padding: 1em;
+  cursor: pointer;
+  border: 1px solid #71985c;
+  border-radius: 4px;
+  background-color: #9ec542;
+}
+
 .slr-menu-item {
   display: inline-block !important;
   margin-bottom: 4px;

@@ -236,20 +236,26 @@ define([
         // for alt/mobile layout, change tooltip position
         this.$menuRes.find(".slr-menu-item").addClass("cm-tooltip-top").removeClass("cm-tooltip-bottom cm-tooltip-left");
         // bind buttons to objects
+        this.$menuButtons.defaultView = this.$menu.find("#slr-tool-defaultview")
+                                          .add(this.$menuRes.find("#slr-tool-defaultview"));
+        /*
         this.$menuButtons.zoomIn      = this.$menu.find("#slr-tool-zoomin")
                                           .add(this.$menuRes.find("#slr-tool-zoomin"));
         this.$menuButtons.zoomOut     = this.$menu.find("#slr-tool-zoomout")
                                           .add(this.$menuRes.find("#slr-tool-zoomout"));
+                                          */
         this.$menuButtons.geolocator  = this.$menu.find("#slr-tool-geolocate")
                                           .add(this.$menuRes.find("#slr-tool-geolocate"));
         this.$menuButtons.geolocation = this.$menu.find("#slr-tool-geolocation")
                                           .add(this.$menuRes.find("#slr-tool-geolocation"));
         this.$menuButtons.legend      = this.$menu.find("#slr-tool-legend")
                                           .add(this.$menuRes.find("#slr-tool-legend"));
+        /*
         this.$menuButtons.basemaps    = this.$menu.find("#slr-tool-basemaps")
                                           .add(this.$menuRes.find("#slr-tool-basemaps"));
         this.$menuButtons.uda         = this.$menu.find("#slr-tool-uda")
                                           .add(this.$menuRes.find("#slr-tool-uda"));
+                                          */
         this.$menuButtons.scenarios   = this.$menu.find("#slr-tool-scenarios")
                                           .add(this.$menuRes.find("#slr-tool-scenarios"));
         this.$menuButtons.help        = this.$headerMenu.find("#slr-tool-help").parent(".slr-header-tool-wrapper");

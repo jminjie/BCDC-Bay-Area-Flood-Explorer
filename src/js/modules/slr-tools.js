@@ -56,9 +56,11 @@ define([
     SLRTools.prototype.init = function(params) {
         var self = this;
         
-        // zoom functionalities
-        params.view.$menuButtons.zoomIn.on('click', function() { params.mapHandler.zoomIn(); });
-        params.view.$menuButtons.zoomOut.on('click', function() { params.mapHandler.zoomOut(); });
+        // Add default view button to reset view
+        params.view.$menuButtons.defaultView.on('click', function() { params.mapHandler.setMapView(); });
+        // disable zoom buttons
+        //params.view.$menuButtons.zoomIn.on('click', function() { params.mapHandler.zoomIn(); });
+        //params.view.$menuButtons.zoomOut.on('click', function() { params.mapHandler.zoomOut(); });
         
         // geolocator
         this.elements.geolocator.asJQuery().keypress(function(evt) {
@@ -95,11 +97,13 @@ define([
         });
         
         // user-defined-area
+        /*
         params.view.$menuButtons.uda.on('click', function() {
             params.uda.openUploadModal(function(geomType) {
                 params.udaLegendItem.update(geomType);
             });
         });
+        */
         
         // help
         params.view.$menuButtons.help.on('click', params.helpCallback);
@@ -107,8 +111,10 @@ define([
         // misc tools (note, binding will set event in 'mobileView' param, so those default as mobile)
         params.view.$menuButtons.geolocation.on('click', this.geolocation.bind(this, params.mapHandler));
         params.view.$menuButtons.geolocator.on('click', this.openGeolocateModal.bind(this, params.mapHandler));
+        /*
         params.view.$menuButtons.basemaps.on('click', this.open.bind(this, "basemaps", self._initBasemapSelect.bind(this, params.mapHandler)));
         
+        */
         // printing
         params.view.$menuButtons.print.on('click', params.printCallback);
         

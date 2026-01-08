@@ -444,7 +444,7 @@ define([
         var view = this.olMap.getView();
         view.setZoom(view.getZoom()-1);
     };
-    
+
     /**
      * Set (or reset) map view and properties of map view.
      * @param {number[]} [center] - Map center, optional, if not provided uses default from map init.
