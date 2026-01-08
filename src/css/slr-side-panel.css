@@ -1,4 +1,5 @@
 #slr-side-panel {
+  display: none; /* Exploratorium modification -- remove side panel */
   position: absolute;
   top: 0;
   right: 0;

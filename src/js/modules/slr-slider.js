@@ -14,7 +14,7 @@ define([
             var elements = {
                 container:  "#slr-container", 
                 panel:      "#slr-slider-panel", 
-                slidePopup: "#slr-slide-popup", 
+                //slidePopup: "#slr-slide-popup", 
                 svg:        "#slr-slider-svg"
             };
             for(var e in elements) { elements[e] = new SiteElement(elements[e]); };
@@ -54,7 +54,7 @@ define([
         // hard-coded
         this.svg = d3.select(this.elements.panel.selector).append("svg")
             .attr("id", this.elements.svg.asId())
-            .attr("width", "100%")
+            .attr("width", "200%")
             .attr("height", "100%")
             .style('font-family', "'Century Gothic', CenturyGothic, Geneva, AppleGothic, sans-serif")
             .style('overflow', 'visible');
@@ -65,10 +65,10 @@ define([
         this.gSlide  = this.svg.append("g").attr("id", "slr-slider-g-slide");
         
         // vars/handlers for popup
-        this.$popup = null;
+        //this.$popup = null;
         this.popupText = null;
         this._mouseOver = false;
-        this._popupEnabled = true;
+        this._popupEnabled = false;
         this.defaultPopupText = "Total Water level + MHHW. For more information on additional flood scenarios that lead to this level of flooding, see the “One Map, Many Futures” window to the right.";
         
         // animation vars
@@ -93,20 +93,20 @@ define([
                 if(self._isAnimating) return;
                 self._mouseOver = true;
                 if(self._popupEnabled) {
-                    self.$popup.show();
+                    //self.$popup.show();
                 }
             }, 
             mouseoutSlideListener  : function(evt) {
                 if(self._isAnimating) return;
                 self._mouseOver = false;
-                self.$popup.hide();
+                //self.$popup.hide();
             }, 
             grabSlideListener      : function(evt) {
                 if(self._isAnimating) return;
                 console.debug("Slide grabbed");
                 self.grabSlide();
                 if(self._mobileMode) {
-                    self.$popup.show();
+                    //self.$popup.show();
                 }
                 if(evt && evt.preventDefault) evt.preventDefault();
             }, 
@@ -117,7 +117,7 @@ define([
                     if(evt && evt.preventDefault) evt.preventDefault();
                 }
                 if(self._mobileMode) {
-                    self.$popup.hide();
+                    //self.$popup.hide();
                 }
             }, 
             ungrabSlideListener    : function(evt) {
@@ -127,10 +127,10 @@ define([
                     self.ungrabSlide(evt && !evt.changedTouches);
                     if(evt && evt.stopPropagation) evt.stopPropagation();
                     if(self._mobileMode) {
-                        self.$popup.show();
+                        //self.$popup.show();
                     }
                 } else if(self._mobileMode) {
-                    self.$popup.hide();
+                    //self.$popup.hide();
                 }
             }, 
             ungrabMouseOutListener : function(evt) {
@@ -150,7 +150,7 @@ define([
                 var y = self.scale(self._value);
                 self._redrawSliderPosition(y);
                 self._moveSlide(y);
-                self._updateSlidePopup(y);
+                //self._updateSlidePopup(y);
             }, 
             resizeEndListener      : function() {
                 // self-replacing timeout function so it's not constantly doing it for every single moment of 
@@ -185,7 +185,7 @@ define([
     SLRSlider.prototype.exit = function() {
         window.removeEventListener('resize', this.eventHandlers.resizeEndListener);
         this._removeSlideInteractions();
-        this.$popup.remove();
+        //this.$popup.remove();
         // i hate internet explorer so damn much
         try {
             this.gSlide.node().remove();
@@ -373,10 +373,12 @@ define([
         };
         animateWave();
         
+        /*
         this.$popup = $(this.elements.slidePopup.createElement("div"))
                           .appendTo(this.elements.container.asJQuery())
                           .css({'left': sbbox.width + 14});
-        this._updateSlidePopup(y);
+                          */
+        //this._updateSlidePopup(y);
     };
     
     
@@ -395,30 +397,6 @@ define([
             yIncrement = this.margins.bottom / 5.5,
             y          = sbbox.height - this.margins.bottom + 40;
         this.gLabel.selectAll(".slr-slider-label").remove();
-        this.gLabel.append("text")
-            .attr("class", "slr-slider-label")
-            .attr("x", 6)
-            .attr("y", y)
-            .attr("text-anchor", "left")
-            .attr("fill", this.colors.label)
-            .text("Total");
-        y += yIncrement;
-        this.gLabel.append("text")
-            .attr("class", "slr-slider-label")
-            .attr("x", 6)
-            .attr("y", y)
-            .attr("text-anchor", "left")
-            .attr("fill", this.colors.label)
-            .text("Water");
-        y += yIncrement;
-        this.gLabel.append("text")
-            .attr("class", "slr-slider-label")
-            .attr("x", 6)
-            .attr("y", y)
-            .attr("text-anchor", "left")
-            .attr("fill", this.colors.label)
-            .style("font-size", "0.5em")
-            .text("(MHHW+)");
     };
     
     SLRSlider.prototype._redrawSliderTicks = function() {
@@ -507,7 +485,7 @@ define([
         this._value = Math.round(this.scale.invert(y));
         this.gSlide.selectAll(".slr-slider-sel-text")
             .text(this._value + "\"");
-        this._updateSlidePopup(y);
+        //this._updateSlidePopup(y);
         return y;
     };
     
@@ -575,9 +553,9 @@ define([
         y = this.scale(nearestTick[0]);
         this._moveSlide(y);
         this._updateSlide(y);
-        this._enableSlidePopup();
+        //this._enableSlidePopup();
         if(showPopup && this._mouseOver) {
-            this.$popup.show();
+            //this.$popup.show();
         }
         if(this.eventHandlers.sliderChangeListener) {
             this.eventHandlers.sliderChangeListener(this._value);
@@ -647,7 +625,6 @@ define([
         if(this._value) {
             this.$popup.html("<strong>MHHW <span style='font-size:1.4em;'>+ " + this._value + "\"</span></strong> ");
         } else {
-            this.$popup.html("");
         }
         if(this.popupText && (this._value in this.popupText)) {
             this.$popup.append(this.popupText[this._value]);

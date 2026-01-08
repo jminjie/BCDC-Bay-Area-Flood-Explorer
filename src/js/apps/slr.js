@@ -595,6 +595,12 @@ define([
                         }
                     );
                 });
+                // Exploratorium modification -- automatically close tutorial after 1 second
+                setTimeout(() => {
+                    console.log("1 second");
+                    modals.close();
+                    if(initApplication) self.slider.animateIntro(); // animate slider
+                }, 1000);
             }
         );
     };

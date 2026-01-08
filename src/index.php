@@ -69,7 +69,8 @@ require_once("local_config.php");
       </div>
     </div>
     <script type="text/javascript">
-      window._siteInit = {<?php if($ini["dev_debug_msgs"]) { ?>'debugMode':true,<?php } ?>'page':"<?= isset($_GET["p"]) && !empty($_GET["p"]) ? filter_input(INPUT_GET, "p", FILTER_SANITIZE_STRING) : "home"; ?>",'anchor':<?= isset($_GET["a"]) && !empty($_GET["a"]) ? "\"".filter_input(INPUT_GET, "a", FILTER_SANITIZE_STRING)."\"" : "null"; ?>};
+      // Exploratorium modification -- start in explorer mode by default
+      window._siteInit = {<?php if($ini["dev_debug_msgs"]) { ?>'debugMode':true,<?php } ?>'page':"<?= isset($_GET["p"]) && !empty($_GET["p"]) ? filter_input(INPUT_GET, "p", FILTER_SANITIZE_STRING) : "explorer"; ?>",'anchor':<?= isset($_GET["a"]) && !empty($_GET["a"]) ? "\"".filter_input(INPUT_GET, "a", FILTER_SANITIZE_STRING)."\"" : "null"; ?>};
     </script>
 <?php if($ini["dev_mode"] && !$ini["dev_force_build"]) { ?>
     <script src="js/lib/require.js"></script>

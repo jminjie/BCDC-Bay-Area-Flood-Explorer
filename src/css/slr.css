@@ -40,7 +40,7 @@
 
 /* ART logo on btm right corner */
 #slr-art-logo {
-  display: block;
+  display: none; /* Exploratorium modification */
   position: absolute;
   bottom: 5px;
   right: 320px;
@@ -76,7 +76,7 @@
   z-index: 99;
 }
 #slr-menu {
-  display: flex;
+  display: none; /* Exploratorium modification */
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;

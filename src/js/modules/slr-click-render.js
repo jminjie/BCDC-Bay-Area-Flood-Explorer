@@ -34,6 +34,7 @@ define([], function() {
                     }
                     break;
                 case this.clickLayers["overtopping"]:
+                    /*
                     var heightFt = parseFloat(featsInfo[i]["ot_ft"]) || 0;
                         //feet = Math.floor(heightFt), 
                         //inches = (heightFt - feet)*12.0;
@@ -44,6 +45,7 @@ define([], function() {
                         "<strong>Shoreline Type</strong>: <a class='shoreline-glossary-link'>" + featsInfo[i]["class"] + "</a>" + 
                         "<div class='popup-spacer'></div>"
                     );
+                    */
                     break;
                 case this.clickLayers["consq-hwy-vehicle"]:
                     if(!consqData.highways) consqData.highways = {};

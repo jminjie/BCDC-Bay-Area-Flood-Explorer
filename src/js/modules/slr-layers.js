@@ -236,6 +236,7 @@ define([
             }), 
             {noUpdate: true, clickOnly: true}
         );
+        /*
         this.addLayer(
             "legaldelta", 
             new ol.layer.Tile({
@@ -247,6 +248,7 @@ define([
             }), 
             {noUpdate: true}
         );
+        */
         this.addLayer(
             "oceanhash", 
             new ol.layer.Tile({
@@ -276,17 +278,23 @@ define([
             styles = {
                 normal: [new ol.style.Style({
                     fill: null, 
+                    stroke: null // Exploratorium modification - no county lines
+                    /*
                     stroke: new ol.style.Stroke({
                         color: "#aaa", 
                         width: 2
                     })
+                    */
                 })], 
                 selected: [new ol.style.Style({
                     fill: null, 
+                    stroke: null // Exploratorium modification - no county lines
+                    /*
                     stroke: new ol.style.Stroke({
                         color: "#D4FF6E", 
                         width: 3
                     })
+                    */
                 })], 
                 label: function(feature) {
                     var fillColor   = "#fff", 
@@ -422,6 +430,8 @@ define([
                 opacity: 0.7
             }
         );
+        /*
+        // Exploratorium modification -- remove shoreline overtopping
         this.addLayer(
             "overtopping", 
             new ol.layer.Tile({source: null}), 
@@ -437,6 +447,7 @@ define([
                 clickSourceNameFunction: function(slr) { return "overtopping"+slr; }
             }
         );
+        */
     };
     
     SLRLayers.prototype._initConsequenceLayers = function() {
