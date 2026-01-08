@@ -8,3 +8,6 @@ wwwroot/
 .htpasswd
 ms_error
 mapfiles/ms_error
+
+*.swp
+/var-www
