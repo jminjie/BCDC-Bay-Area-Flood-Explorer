@@ -176,6 +176,11 @@ define([
                 self._updateLegendControls(self.legend);
             }
         });
+
+        // Start at 36 inches
+        setTimeout(() => {
+            self.updateSLR(36, true, true);
+        }, 2000);
     };
     
     
