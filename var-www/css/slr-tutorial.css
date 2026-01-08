@@ -1,0 +1,136 @@
+#slr-tutorial-modal {
+  width: 70%;
+  max-width: 1000px;
+  padding: 0 12px;
+}
+#slr-tutorial-modal .btn2, #slr-tutorial-modal .btn {
+  font-weight: bolder;
+  font-size: 0.9em;
+}
+#slr-tutorial-modal .close {
+  display: inline-block;
+  margin: 0 auto 1em auto;
+  padding: 4px 20px;
+}
+#slr-tutorial-stage {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin: auto;
+  margin-top: 1.5em;
+  background-color: #111;
+}
+#slr-tutorial-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  /* force preload of all bg images */
+  background-image: 
+      url(../images/tutorial/bg-1.jpg), 
+      url(../images/tutorial/bg-2.jpg), 
+      url(../images/tutorial/bg-3.jpg), 
+      url(../images/tutorial/bg-4.jpg), 
+      url(../images/tutorial/bg-5.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#slr-tutorial-prev, #slr-tutorial-next {
+  display: block;
+  position: absolute;
+  top: 50%;
+  height: 1em;
+  line-height: 1em;
+  margin-top: -0.4em;
+  display: flex;
+  align-items: center;
+  padding: 0.2em;
+  color: #fff;
+  font-size: 3.4em;
+  font-weight: bold;
+  cursor: pointer;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  background: rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease;
+}
+#slr-tutorial-prev {
+  left: 0;
+  padding-right: 0.25em;
+  border-top-right-radius: 0.1em;
+  border-bottom-right-radius: 0.1em;
+}
+#slr-tutorial-next {
+  right: 0;
+  padding-left: 0.25em;
+  border-top-left-radius: 0.1em;
+  border-bottom-left-radius: 0.1em;
+}
+#slr-tutorial-prev:hover, #slr-tutorial-next:hover {
+  background: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+#slr-tutorial-prev.disabled, #slr-tutorial-next.disabled {
+  background: none !important;
+  color: #333;
+  font-style: normal;
+  cursor: default;
+}
+#slr-tutorial-text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-bottom: 0.6em;
+  padding: 0.5em 1.0em;
+  min-height: 4em;
+  background: #ddd;
+  border-bottom-left-radius: 0.4em;
+  border-bottom-right-radius: 0.4em;
+  font-size: 1em;
+  text-align: justify;
+}
+#slr-tutorial-text p {
+  margin: 0;
+}
+#slr-tutorial-text .cm-icon-container {
+  display: inline-block;
+  position: relative;
+  width: 1.5em;
+}
+#slr-tutorial-text .cm-icon {
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  left: -0.25em;
+  bottom: -0.5em;
+  font-size: 0.85em;
+  box-sizing: border-box;
+  box-shadow: 0 0 3px 1px rgba(0,0,0,0.5);
+  background-color: #f3ff8e;
+  font-family: 'Century Gothic',CenturyGothic,Geneva,AppleGothic,sans-serif;
+  color: #000;
+  cursor: default;
+}
+#slr-tutorial-text .cm-icon:hover {
+  background-color: #e7f7c2;
+}
+#slr-tutorial-text .cm-icon-help {
+  position: absolute;
+  left: -0.25em;
+  bottom: -0.5em;
+  margin: 2px 4px;
+  width: 1.4em;
+  height: 1.4em;
+  background-color: #000;
+  border-radius: 0.8em;
+  background-repeat: no-repeat;
+  background-image: url(../images/icons8-info-invert.png);
+  background-position: 0.1em;
+  background-size: 1.2em 1.2em;
+  font-style: normal;
+  cursor: default;
+}

@@ -1,7 +1,8 @@
 {
     "name": "bcdc-slr",
     "dependencies": {
-        "requirejs": "~2.2.0",
-        "fs-extra": "~4.0.2"
+        "@lawrencesim/web-common": "^6.0.0",
+        "fs-extra": "~4.0.2",
+        "requirejs": "~2.2.0"
     }
 }

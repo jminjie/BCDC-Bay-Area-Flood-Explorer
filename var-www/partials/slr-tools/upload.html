@@ -1,0 +1,19 @@
+<div class="slr-modal">
+  <h3>User Data Upload</h3>
+  <div id="slr-modal-upload">
+    <p style="font-weight:bolder;">Import a KML file or an ESRI Shapefile</p>
+    <ul>
+      <li>KML file can be in .kml or .kmz format.</li>
+      <li>Shapefiles must be zipped and include all .cpg, .dbf, .prj, .sbn, .shp, and .sbx files.</li>
+      <li>Attributes associated with the data will be ignored.</li>
+      <li>Maximum upload file size is 5MB.</li>
+    </ul>
+    <form id="slr-upload-form" method="POST" enctype="multipart/form-data">
+      <p style="font-weight:bolder;">Select your file and click "Upload File" to begin importing.</p>
+      <input type="file" name="up" id="slr-upload-form-file" />
+      <input type="hidden" value="5242880" name="max-file-size" />
+      <input class="btn2" type="submit" name="upload-submit" value="Upload File" />
+      <p class="out-messages"></p>
+    </form>
+  </div>
+</div>

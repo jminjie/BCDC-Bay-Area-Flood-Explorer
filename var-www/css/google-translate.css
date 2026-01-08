@@ -1,0 +1,35 @@
+body {
+  top: 0px !important;
+}
+#google_translate_element {
+  z-index: 9999;
+}
+.goog-te-banner-frame.skiptranslate {
+  top: auto !important;
+  bottom: 0;
+  left: 54px;
+  width: 460px;
+}
+#google_translate_element {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  transform: scale(0.9);
+}
+body.in-splash .goog-te-banner-frame.skiptranslate {
+  display: none;
+}
+body.in-slr-view #google_translate_element {
+  top: 6px;
+  right: 0;
+}
+body.in-storymap .goog-te-banner-frame.skiptranslate {
+  /* display: none; */
+}
+body.in-storymap #google_translate_element {
+   /* display: none; */
+}
+#translate-detect {
+  position: absolute;
+  display: none;
+}

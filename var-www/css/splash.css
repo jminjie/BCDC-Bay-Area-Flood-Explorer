@@ -1,0 +1,140 @@
+#splash-container {
+  position: relative;
+  display: flex;
+  -ms-flex: 0 0 auto;
+  -webkit-flex: 0 0 auto;
+  flex: 0 0 auto;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  background-color: #004785;
+  color: #fff;
+  z-index: 9999;
+}
+#splash-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60%;
+  height: 100%;
+  background-color: #9ec542;
+  background-image: url("../images/sfbay-edit.png");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: -2px;
+}
+#splash-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#splash-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 590px;
+  max-width: calc(100% - 120px);
+  margin: 0 60px;
+  -ms-transform: translateY(-50%); /* IE can't do nested calc */
+  -webkit-transform: translateY(calc(-50% - 40px));
+  transform: translateY(calc(-50% - 40px));
+}
+
+/* scaling background */
+@media screen and (max-width: 1415px) {
+  #splash-background { width: 55%; }
+}
+@media screen and (max-width: 1120px) {
+  #splash-background { width: 50%; }
+}
+@media screen and (max-width: 1145px) {
+  #splash-background { width: 45%; }
+}
+@media screen and (max-width: 840px) {
+  #splash-background { width: 0; }
+}
+
+/* logo and title */
+#splash-title-container {
+  margin-bottom: 20px;
+  font-family: 'Oswald','Century Gothic',CenturyGothic,Geneva,AppleGothic,sans-serif;
+}
+#splash-logo {
+  position: absolute;
+  width: 145px;
+  left: 8px;
+  top: 55px;
+}
+#splash-subtitle, #splash-title {
+  display: block;
+  padding-left: 160px;
+}
+#splash-subtitle {
+  white-space: nowrap;
+  font-size: 2.1em;;
+  line-height: 1.2em;
+}
+#splash-title {
+  font-size: 5.2em;
+  line-height: 1.0em;
+}
+#splash-text {
+  margin-bottom: 24px;
+  text-align: justify;
+  font-size: 0.9em;
+}
+
+/* menu */
+#splash-menu {
+  display: flex;
+  -ms-flex-direction: row;
+  -wbekit-flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+#splash-menu .menu-item {
+  width: 120px;
+  border: 2px solid #ddd;
+  border-radius: 2px;
+  box-shadow: 3px 3px 2px #373534;
+  padding: 6px 6px;
+  text-align: center;
+  font-size: 0.9em;
+  color: #fff;
+  cursor: pointer;
+}
+#splash-menu .menu-item[goto="learn"] {
+  background-color: #9ec542;
+  border-color: #fff;
+}
+#splash-menu .menu-item[goto="explorer"] {
+  background-color: #4e9153;
+}
+#splash-menu .menu-item[goto="download"] {
+  background-color: #2e7c5a;
+}
+#splash-menu .menu-item[goto="about"] {
+  background-color: #0f6862;
+}
+
+/* bottom logo and disclaimer */
+#splash-bottom-content {
+  position: absolute;
+  bottom: -130px;
+  width: 95%;
+  margin-left: 2.5%;
+  margin-top: 0.5em;
+  font-size: 0.84em;
+  font-style: italic;
+}
+.splash-bottom-logo {
+  float: left;
+  margin-top: 2px;
+  margin-right: 7px;
+}
+#splash-bottom-content a {
+  color: #c7ef68;
+}
