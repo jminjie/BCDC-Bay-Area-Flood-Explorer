@@ -14,6 +14,7 @@ define([
     function SLRTools(config) {
         this.feedbackUrl    = config.urls.feedback;
         this.getInvolvedUrl = config.urls.getInvolved;
+        this.defaultViewButton = true;
         
         this.elements = (function() {
             var elements = {
@@ -57,7 +58,13 @@ define([
         var self = this;
         
         // Add default view button to reset view
-        params.view.$menuButtons.defaultView.on('click', function() { params.mapHandler.setMapView(); });
+        params.view.$menuButtons.defaultView.on('click', function() {
+            if (self.defaultViewButton == false) {
+                return;
+            }
+            self.defaultViewButton = false;
+            params.mapHandler.flyToDefault(() => {self.defaultViewButton = true; });
+        });
         // disable zoom buttons
         //params.view.$menuButtons.zoomIn.on('click', function() { params.mapHandler.zoomIn(); });
         //params.view.$menuButtons.zoomOut.on('click', function() { params.mapHandler.zoomOut(); });

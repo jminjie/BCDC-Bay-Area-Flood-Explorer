@@ -11,3 +11,4 @@ mapfiles/ms_error
 
 *.swp
 /var-www
+.DS_STORE

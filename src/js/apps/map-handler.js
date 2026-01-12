@@ -338,6 +338,12 @@ define([
             self.hideMarker();
         };
         this.on("click", olMapHideMarkerListener);
+
+        // TODO put these in a JSON file
+        this.addPOIMarkerOnLonLat([-122.2305789, 37.713007], "OAK", "This is OAK airport");
+        this.addPOIMarkerOnLonLat([-122.2948618, 37.830528], "I-80 on ramp", "Cars need to drive here");
+        this.addPOIMarkerOnLonLat([-122.3927667, 37.743134], "Water treatment plant", "To clean our water, lorem ipsum");
+        this.addPOIMarkerOnLonLat([-122.3943207, 37.78768], "PGE substation", "Makes electricity lorem ipsum", "images/poi/pgesubstation.png");
     };
     
     MapHandler.prototype.exit = function() {
@@ -444,6 +450,40 @@ define([
         var view = this.olMap.getView();
         view.setZoom(view.getZoom()-1);
     };
+
+    MapHandler.prototype.flyToDefault = function flyToDefault(done) {
+        this.closePopup();
+        var view = this.olMap.getView();
+
+        // this.resetViewCenter
+        let location = ol.proj.fromLonLat([-122.45, 37.78]);
+
+        const duration = 1000;
+        const zoom = view.getZoom();
+        let parts = 1;
+        let called = false;
+        function callback(complete) {
+            --parts;
+            if (called) {
+                return;
+            }
+            if (parts === 0 || !complete) {
+                called = true;
+                if (done) {
+                    done(complete);
+                }
+            }
+        }
+        view.animate(
+            {
+                zoom: this.resetViewZoom,
+                center: location,
+                duration: duration,
+            },
+            callback,
+        );
+    }
+
 
     /**
      * Set (or reset) map view and properties of map view.
@@ -875,6 +915,60 @@ define([
     
     MapHandler.prototype.showMarkerOnLonLat = function(lonlat) {
         this.showMarker(ol.proj.fromLonLat(lonlat));
+    };
+
+    MapHandler.prototype.addPOIMarkerOnLonLat = function(lonlat, poiName, desc, imgSrc) {
+        let markerFeature0 = new ol.Feature({
+            geometry: new ol.geom.Point([0,0])
+        });
+        markerFeature0.poiName = poiName;
+        markerFeature0.description = desc;
+        markerFeature0.imgSrc = imgSrc;
+        markerFeature0.setStyle([
+            new ol.style.Style({
+                image: new ol.style.Icon({
+                    anchor: [13, 33],
+                    anchorXUnits: 'pixels',
+                    anchorYUnits: 'pixels',
+                    opacity: 0.3,
+                    src: 'images/poimarker-shadow.png'
+                })
+            }),
+            new ol.style.Style({
+                image: new ol.style.Icon({
+                    anchor: [0.5, 45],
+                    anchorXUnits: 'fraction',
+                    anchorYUnits: 'pixels',
+                    opacity: 1,
+                    src: 'images/poimarker.png'
+                })
+            })
+        ]);
+        let markerLayer0 = new ol.layer.Vector({
+            source: new ol.source.Vector({
+                features: [markerFeature0]
+            })
+        });
+        this.olMap.addLayer(markerLayer0);
+        markerLayer0.setZIndex(9999);
+        this.addClickFunctionality('vector', markerLayer0,
+            (feature) => {console.log("CLICK", feature.poiName); return true},
+            (feature) => {
+                if (feature.imgSrc != null) {
+                    return [`<h1>${feature.poiName}</h1>`,
+                        `<body>${feature.description}<br><img style="width:280px;" src="${feature.imgSrc}" /></body>`]
+                } else {
+                    return [`<h1>${feature.poiName}</h1>`,
+                        `<body>${feature.description}</body>`]
+                }
+            },
+            null,
+            null);
+
+        let coords = ol.proj.fromLonLat(lonlat);
+        markerFeature0.getGeometry().setCoordinates(coords);
+        markerLayer0.setVisible(true);
+
     };
     
     MapHandler.prototype.hideMarker = function() {
