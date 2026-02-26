@@ -48,6 +48,8 @@ define([
         // scale and state variables
         this.scale       = d3.scaleLinear().domain([0, this.totalInches]);
         this._value      = 0;
+        this.dragIconY   = null;
+        this.dragIconO   = 1.0;
         
         // element handlers
         // While I tried to keep id and class names abstracted, everything within SVG is going to be 
@@ -79,7 +81,7 @@ define([
         this._redrawSliderTicks();
         this._redrawLabel();
         this._drawSlide();
-        
+
         // this is to change how interaction with the tooltip works
         this._mobileMode = false;
         
@@ -294,6 +296,78 @@ define([
             .attr("clip-path", "url(#slr-slider-tick-label-clipmask");
         */
    };
+
+    SLRSlider.prototype._drawDragIcon = function() {
+        this.dragIconY = this.scale(this._value) - 190;
+
+        this.dragIcon = this.gBar.append("image")
+            .attr("href", "images/dragicon.svg")
+            .attr("width", "250")
+            .attr("x", 0)
+            .attr("y", this.dragIconY)
+            .attr("id", "drag-icon")
+            .attr("opacity", 0)
+            .transition()
+            .duration(400)
+            .ease(d3.easeCubicOut)
+            .attr("opacity", 1);
+    }
+
+
+    SLRSlider.prototype.showTideContext = function(tide) {
+        if (tide == 12) {
+        this.tideContext = this.gBar.append("image")
+            .attr("href", "images/tideinfo.png")
+            .attr("width", "400")
+            .attr("x", 120)
+            .attr("y", 750)
+            .attr("id", "tide-info")
+            .attr("opacity", 0)
+            .transition()
+            .duration(600)
+            .attr("opacity", 1)
+            .transition()
+            .delay(3000)
+            .duration(600)
+            .attr("opacity", 0)
+            .remove();
+        } else if (tide == 24) {
+        this.tideContext = this.gBar.append("image")
+            .attr("href", "images/tidestorminfo.png")
+            .attr("width", "400")
+            .attr("x", 120)
+            .attr("y", 650)
+            .attr("id", "tide-storm-info")
+            .attr("opacity", 0)
+            .transition()
+            .duration(600)
+            .attr("opacity", 1)
+            .transition()
+            .delay(3000)
+            .duration(600)
+            .attr("opacity", 0)
+            .remove();
+        }
+    }
+
+    SLRSlider.prototype._drawDragInfo = function() {
+        this.dragInfo = this.gBar.append("image")
+            .attr("href", "images/draginfo.svg")
+            .attr("width", "300")
+            .attr("x", 100)
+            .attr("y", 300)
+            .attr("id", "drag-info")
+            .attr("opacity", 0)
+            .transition()
+            .duration(600)
+            .attr("opacity", 1)
+            .transition()
+            .delay(1500)
+            .duration(600)
+            .attr("opacity", 0)
+            .remove();
+    }
+
     
     SLRSlider.prototype._drawSlide = function() {
         var torad      = Math.PI*2.0, 
@@ -397,6 +471,74 @@ define([
             yIncrement = this.margins.bottom / 5.5,
             y          = sbbox.height - this.margins.bottom + 40;
         this.gLabel.selectAll(".slr-slider-label").remove();
+        y += yIncrement;
+        this.gLabel.append("text")
+            .attr("class", "slr-slider-label")
+            .attr("x", 10)
+            .attr("y", y)
+            .attr("text-anchor", "left")
+            .attr("fill", this.colors.label)
+            .text("Total water");
+        y += yIncrement;
+        this.gLabel.append("text")
+            .attr("class", "slr-slider-label")
+            .attr("x", 20)
+            .attr("y", y)
+            .attr("text-anchor", "left")
+            .attr("fill", this.colors.label)
+            .text("level rise");
+    };
+
+    SLRSlider.prototype.idleAnimation = function() {
+        this.animateDraggable(150, false);
+        this.idleTimeout = setTimeout(() => {
+            this.animateDraggable(150, true);
+        }, 1500);
+    }
+
+    SLRSlider.prototype.stopIdleAnimation = function() {
+        clearTimeout(this.idleTimeout);
+        this.dragIconY = null;
+        this.dragIconO = 1.0;
+        this.gBar.selectAll("#drag-icon").remove();
+        this.gBar.selectAll("#drag-info").remove();
+    }
+
+    SLRSlider.prototype.animateDraggable = function(dist, dir) {
+        this._drawDragIcon();
+        this._drawDragInfo();
+        setTimeout(() => {
+            this.draggableLoop(dist, dir);
+        }, 400);
+    }
+
+    SLRSlider.prototype.draggableLoop = function(dist, dir) {
+            var intervalMs = 10;
+            var speed = 3;
+            var opacityRate = 0.02;
+            if (!dir) {
+                this.dragIconY = this.dragIconY - speed;
+            } else {
+                this.dragIconY = this.dragIconY + speed;
+            }
+            this.gBar.selectAll("#drag-icon")
+                .attr("y", this.dragIconY)
+
+            if (dist <= 0) {
+                this.dragIconO = this.dragIconO - opacityRate;
+                this.gBar.selectAll("#drag-icon")
+                    .attr("opacity", this.dragIconO)
+
+                if (this.dragIconO <= 0) {
+                    this.gBar.select("#drag-icon").remove();
+                    this.dragIconY = null;
+                    this.dragIconO = 1.0;
+                    return;
+                }
+            }
+            setTimeout(() => {
+                this.draggableLoop(dist - speed, dir);
+            }, intervalMs);
     };
     
     SLRSlider.prototype._redrawSliderTicks = function() {
@@ -551,6 +693,11 @@ define([
             value       = Math.round(this.scale.invert(y)), 
             nearestTick = this.getNearestTickAndDistance(value);
         y = this.scale(nearestTick[0]);
+        if (nearestTick[0] == 12) {
+            this.showTideContext(12);
+        } else if (nearestTick[0] == 24) {
+            this.showTideContext(24);
+        }
         this._moveSlide(y);
         this._updateSlide(y);
         //this._enableSlidePopup();

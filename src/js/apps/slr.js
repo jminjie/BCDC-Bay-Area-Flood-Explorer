@@ -181,6 +181,32 @@ define([
         setTimeout(() => {
             self.updateSLR(36, true, true);
         }, 2000);
+
+        // Idle timer: call `onIdle` after `idleSeconds` of inactivity.
+        this.idleSeconds = 30;
+        this._idleTimeout = null;
+        if(typeof this.onIdle !== 'function') {
+            this.onIdle = function() {
+                console.debug('SLR app idle');
+                this.slider.idleAnimation();
+            };
+        }
+        var _resetIdleTimer = function() {
+            if(self._idleTimeout) {
+                clearTimeout(self._idleTimeout);
+            }
+            self._idleTimeout = setTimeout(function() { self.onIdle(); }, self.idleSeconds * 1000);
+        };
+        // start timer
+        _resetIdleTimer();
+        // When a touch or pointer event occurs, reset the idle timer
+        this._onUserInteraction = function(evt) {
+            _resetIdleTimer();
+            self.slider.stopIdleAnimation();
+        };
+        document.addEventListener('touchstart', this._onUserInteraction, {passive: true});
+        document.addEventListener('touchmove', this._onUserInteraction, {passive: true});
+        document.addEventListener('mousedown', this._onUserInteraction, false);
     };
     
     

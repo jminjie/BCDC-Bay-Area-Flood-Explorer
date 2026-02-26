@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 505.36 325.03">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #000;
+        font-family: Explo-Bold, Explo;
+        font-size: 46px;
+        font-weight: 700;
+      }
+
+      .cls-2 {
+        fill: #82c900;
+        stroke-width: 0px;
+      }
+    </style>
+  </defs>
+  <rect class="cls-2" x="56.61" y="59.62" width="397.66" height="201.07" rx="26.38" ry="26.38"/>
+  <text class="cls-1" transform="translate(87.1 121.31)"><tspan x="0" y="0">Drag the slider to</tspan><tspan x="0" y="55.2">adjust the</tspan><tspan x="0" y="110.4">total water level</tspan></text>
+</svg>
