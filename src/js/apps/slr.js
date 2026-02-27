@@ -183,22 +183,22 @@ define([
         }, 2000);
 
         // Idle timer: call `onIdle` after `idleSeconds` of inactivity.
-        this.idleSeconds = 30;
-        this._idleTimeout = null;
+        this.idleSeconds = 3;
+        this._idleTimeoutId = null;
         if(typeof this.onIdle !== 'function') {
             this.onIdle = function() {
                 console.debug('SLR app idle');
                 this.slider.idleAnimation();
-                setTimeout((() => {
+                self._idleTimeoutId = setTimeout((() => {
                     this.onIdle();
                 }), 5000);
             };
         }
         var _resetIdleTimer = function() {
-            if(self._idleTimeout) {
-                clearTimeout(self._idleTimeout);
+            if(self._idleTimeoutId) {
+                clearTimeout(self._idleTimeoutId);
             }
-            self._idleTimeout = setTimeout(function() { self.onIdle(); }, self.idleSeconds * 1000);
+            self._idleTimeoutId = setTimeout(function() { self.onIdle(); }, self.idleSeconds * 1000);
         };
         // start timer
         _resetIdleTimer();
