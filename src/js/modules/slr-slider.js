@@ -106,6 +106,7 @@ define([
             grabSlideListener      : function(evt) {
                 if(self._isAnimating) return;
                 console.debug("Slide grabbed");
+                self._hideTideContext();
                 self.grabSlide();
                 if(self._mobileMode) {
                     //self.$popup.show();
@@ -313,6 +314,9 @@ define([
             .attr("opacity", 1);
     }
 
+    SLRSlider.prototype._hideTideContext = function() {
+        this.gBar.selectAll("#tide-info").remove();
+    }
 
     SLRSlider.prototype.showTideContext = function(tide) {
         if (tide == 12) {
@@ -337,7 +341,7 @@ define([
             .attr("width", "400")
             .attr("x", 120)
             .attr("y", 650)
-            .attr("id", "tide-storm-info")
+            .attr("id", "tide-info")
             .attr("opacity", 0)
             .transition()
             .duration(600)
