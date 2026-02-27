@@ -189,6 +189,9 @@ define([
             this.onIdle = function() {
                 console.debug('SLR app idle');
                 this.slider.idleAnimation();
+                setTimeout((() => {
+                    this.onIdle();
+                }), 5000);
             };
         }
         var _resetIdleTimer = function() {
