@@ -183,7 +183,7 @@ define([
         }, 2000);
 
         // Idle timer: call `onIdle` after `idleSeconds` of inactivity.
-        this.idleSeconds = 10;
+        this.idleSeconds = 30;
         this._idleTimeoutId = null;
         if(typeof this.onIdle !== 'function') {
             this.onIdle = function() {
