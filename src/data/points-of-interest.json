@@ -1,0 +1,44 @@
+[
+  {
+    "title": "North Point Wet Weather Facility",
+    "description": "This water treatment facility was built in 1951 and today functions as a backup when rainy weather overwhelms the capacity of the other facilities in San Francisco.",
+    "lat": 37.806701584501624,
+    "lon": -122.40748060401923,
+    "image": "images/wetweather.jpg"
+  },
+  {
+    "title": "Embarcadero SAFE Navigation Center",
+    "description": "This homeless shelter can be used by up to 200 unhoused people, and offers intensive on-site services to help guide people into stable housing.",
+    "lat": 37.78577004931571,
+    "lon": -122.38846927870185,
+    "image": "images/navcenter.jpg"
+  },
+  {
+    "title": "I-80 On-Ramp and Interchange",
+    "description": "Nicknamed “The MacArthur Maze,” this section of the highway connects the Bay Bridge to I-80, I-580, and I-880, and local roads, serving over 100,000 drivers every day.",
+    "lat": 37.82647515891506,
+    "lon": -122.30071404110357,
+    "image": "images/i80.png"
+  },
+  {
+    "title": "OAK Airport",
+    "description": "In 2022 the Port of Oakland completed a 30 million dollar project to improve the perimeter dike of this airport, providing protection against sea level rise until the year 2060.",
+    "lat": 37.71849494584587,
+    "lon": -122.21954606971605,
+    "image": "images/oak.jpg"
+  },
+  {
+    "title": "Palo Alto Horizontal Levee",
+    "description": "As of 2026, construction on this nature-based levee has begun. It is designed to protect the marsh from sea level rise, act as a wildlife habitat, and filter wastewater.",
+    "lat": 37.45165062776523,
+    "lon": -122.10787614282938,
+    "image": "images/levee.jpg"
+  },
+  {
+    "title": "Suisun Marsh",
+    "description": "This recreational site and wildlife habitat is just downstream of one of California’s largest clean water supplies, making its health important to farmers and residents all over the state.",
+    "lat": 38.18671054108913,
+    "lon": -122.06422698541277,
+    "image": "images/suisunmarsh.jpg"
+  }
+]

@@ -148,7 +148,7 @@ define([
                         title = titleElem.length ? titleElem[0].innerText : self.defaultTitle;
                     // save state
                     if(!back) {
-                        history.pushState({p: page}, title, "/"+page);
+                        history.pushState({p: page}, title, "/"+page+window.location.search);
                         if(title) document.title = title;
                     }
                     // onchange events

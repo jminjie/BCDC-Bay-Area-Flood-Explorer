@@ -80,7 +80,7 @@
 }
 
 /* basic mobile view show/hide class */
-@media screen and (min-width: 840px) {
+@media-disabled screen and (min-width: 840px) {
   .mobile-view-hide {
     display: initial;
   }
@@ -88,7 +88,7 @@
     display: none !important;
   }
 }
-@media screen and (max-width: 840px) {
+@media-disabled screen and (max-width: 840px) {
   .mobile-view-hide {
     display: none !important;
   }
@@ -108,7 +108,7 @@
   }
 }*/
 /* wide by slightly-short splash */
-@media screen and (min-width: 840px) and (max-height: 600px) {
+@media-disabled screen and (min-width: 840px) and (max-height: 600px) {
   #splash-content {
     top: 60%;
   }
@@ -117,14 +117,14 @@
   }
 }
 /* Wide by short splash */
-@media screen and (min-width: 840px) and (max-height: 550px) {
+@media-disabled screen and (min-width: 840px) and (max-height: 550px) {
   #splash-text {
     display: none;
   }
 }
 
 /* mobile view */
-@media screen and (max-width: 840px) {
+@media-disabled screen and (max-width: 840px) {
   body.in-storymap .goog-te-banner-frame.skiptranslate {
     display: none;
   }
@@ -343,7 +343,7 @@
     color: #000;
   }
 /* splash mobile view */
-@media screen and (max-width: 840px) {
+@media-disabled screen and (max-width: 840px) {
   #splash-content {
     max-width: none;
     width: 90%;
@@ -391,7 +391,7 @@
   }
 }
 /* splash mobile view, full height */
-@media screen and (max-width: 840px) {
+@media-disabled screen and (max-width: 840px) {
   #splash-logo {
     top: 40px;
     width: 145px;
@@ -405,7 +405,7 @@
   }
 }
 /* splash mobile view, below-normal height */
-@media screen and (max-width: 840px) and (max-height: 800px) {
+@media-disabled screen and (max-width: 840px) and (max-height: 800px) {
   #splash-content {
     top: 55%;
   }
@@ -414,7 +414,7 @@
   }
 }
 /* splash mobile view, small width, full height */
-@media screen and (max-width: 650px) {
+@media-disabled screen and (max-width: 650px) {
   #splash-logo {
     top: 40px;
     width: 115px;
@@ -430,7 +430,7 @@
   }
 }
 /* mobile in horizontal view */
-@media screen  and (max-width: 840px) and (max-height: 650px) {
+@media-disabled screen  and (max-width: 840px) and (max-height: 650px) {
   /* override the scaling properties from above */
   #splash-content, #splash-menu {
     font-size: 1em;
@@ -503,7 +503,7 @@
   }
 }
 /* landscape view with decreasing sizes */
-@media screen and (max-width: 840px) and (max-height: 650px) {
+@media-disabled screen and (max-width: 840px) and (max-height: 650px) {
   #splash-subtitle {
     font-size: 2em;
   }
@@ -511,7 +511,7 @@
     font-size: 5em;
   }
 }
-@media screen and (max-width: 820px) and (max-height: 500px) {
+@media-disabled screen and (max-width: 820px) and (max-height: 500px) {
   #splash-logo {
     display: block;
     top: 40px;
@@ -527,7 +527,7 @@
     font-size: 4.5em;
   }
 }
-@media screen and (max-width: 660px) and (max-height: 660px) {
+@media-disabled screen and (max-width: 660px) and (max-height: 660px) {
   #splash-logo {
     display: block;
     top: 30px;
@@ -543,7 +543,7 @@
     font-size: 4em;
   }
 }
-@media screen and (max-width: 660px) and (max-height: 500px) {
+@media-disabled screen and (max-width: 660px) and (max-height: 500px) {
   #splash-logo {
     width: 80px;
     top: 0px;
@@ -562,13 +562,13 @@
   }
 }
 /* Special case when still relatively wide but no height */
-@media screen and (max-width: 820px) and (min-width: 660px) and (max-height: 390px) {
+@media-disabled screen and (max-width: 820px) and (min-width: 660px) and (max-height: 390px) {
   #splash-text {
     display: none;
   }
 }
 /* For extra small landscape view */
-@media screen and (max-width: 620px) and (max-height: 500px) {
+@media-disabled screen and (max-width: 620px) and (max-height: 500px) {
   #splash-content, #splash-menu {
     font-size: 0.9em;
   }
@@ -576,7 +576,7 @@
     top: -5px;
   }
 }
-@media screen and (max-width: 570px) and (max-height: 500px) {
+@media-disabled screen and (max-width: 570px) and (max-height: 500px) {
   #splash-logo {
     display: none;
   }
@@ -584,13 +584,13 @@
     padding-left: 0;
   }
 }
-@media screen and (max-width: 620px) and (max-height: 275px) {
+@media-disabled screen and (max-width: 620px) and (max-height: 275px) {
   #splash-text {
     display: none;
   }
 }
 /* mobile view and google translate element */
-@media screen and (max-width: 840px) {
+@media-disabled screen and (max-width: 840px) {
   /* translate element scaling */
   #google_translate_element {
     transform: scale(1.1) !important;

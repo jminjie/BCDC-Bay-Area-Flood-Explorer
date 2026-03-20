@@ -53,6 +53,12 @@ define([
     function SLR(config, options) {
         var self = this;
         options = options || {};
+        // read URL params
+        var _urlParams = new URLSearchParams(window.location.search);
+        this.kioskScreen   = _urlParams.get('kioskscreen');
+        this.displayScreen = _urlParams.get('displayscreen');
+        console.log('kioskscreen:', this.kioskScreen);
+        console.log('displayscreen:', this.displayScreen);
         // elements (most of these are handled/init in slr-view, but define all selectors her)
         this.elements = (function() {
             var elements = {
@@ -187,6 +193,7 @@ define([
         this._idleTimeoutId = null;
         if(typeof this.onIdle !== 'function') {
             this.onIdle = function() {
+                if(self.displayScreen) return;
                 console.debug('SLR app idle');
                 this.slider.idleAnimation();
                 self._idleTimeoutId = setTimeout((() => {

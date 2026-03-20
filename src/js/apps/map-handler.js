@@ -339,11 +339,22 @@ define([
         };
         this.on("click", olMapHideMarkerListener);
 
-        // TODO put these in a JSON file
-        this.addPOIMarkerOnLonLat([-122.2305789, 37.713007], "OAK", "This is OAK airport");
-        this.addPOIMarkerOnLonLat([-122.2948618, 37.830528], "I-80 on ramp", "Cars need to drive here");
-        this.addPOIMarkerOnLonLat([-122.3927667, 37.743134], "Water treatment plant", "To clean our water, lorem ipsum");
-        this.addPOIMarkerOnLonLat([-122.3943207, 37.78768], "PGE substation", "Makes electricity lorem ipsum", "images/poi/pgesubstation.png");
+        // Load POIs from JSON file
+        var self = this;
+        $.getJSON("data/points-of-interest.json")
+            .done(function(pois) {
+                if(!$.isArray(pois)) return;
+                for(var i = 0; i < pois.length; i++) {
+                    var p = pois[i];
+                    var lat = p.lat || 0;
+                    var lon = p.lon || 0;
+                    var img = p.image || null;
+                    self.addPOIMarkerOnLonLat([lon, lat], p.title || "", p.description || "", img);
+                }
+            })
+            .fail(function() {
+                console.error("Failed to load points of interest data.");
+            });
     };
     
     MapHandler.prototype.exit = function() {
