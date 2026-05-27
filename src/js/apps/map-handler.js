@@ -95,7 +95,7 @@ define([
         // create actual map div
         this.mapViewElem = $("<div>", {id: this.mapViewId}).prependTo(this.mapContainer);
         // create map and view (take off default zoom control, we'll place manually later)
-        this.olMap = new ol.Map({ target: this.mapViewId, controls: [] });
+        this.olMap = new ol.Map({ target: this.mapViewId, controls: [], interactions: ol.interaction.defaults({ pinchRotate: false, altShiftDragRotate: false }) });
         this.setMapView();
         
         // grabbing cursor functionality since it's not default to open layers 3
