@@ -1,44 +1,51 @@
 [
   {
     "title": "North Point Wet Weather Facility",
-    "description": "This water treatment facility was built in 1951 and today functions as a backup when rainy weather overwhelms the capacity of the other facilities in San Francisco.",
+    "description": "Built in 1951, the North Point Wet Weather Facility treats excess stormwater during heavy rains—but its waterfront location near Fisherman’s Wharf leaves it vulnerable to flooding.",
     "lat": 37.806701584501624,
     "lon": -122.40748060401923,
-    "image": "images/wetweather.jpg"
+    "image": "images/poi/wetweather.jpg"
   },
   {
     "title": "Embarcadero SAFE Navigation Center",
-    "description": "This homeless shelter can be used by up to 200 unhoused people, and offers intensive on-site services to help guide people into stable housing.",
+    "description": "This homeless shelter for 200 people is directly across the street from the bay’s shore. It could be inundated if sea levels rise 6.5 feet by 2100, which some scenarios predict if greenhouse gas emissions continue to rise.",
     "lat": 37.78577004931571,
     "lon": -122.38846927870185,
-    "image": "images/navcenter.jpg"
+    "image": "images/poi/navcenter.jpg"
   },
   {
-    "title": "I-80 On-Ramp and Interchange",
-    "description": "Nicknamed “The MacArthur Maze,” this section of the highway connects the Bay Bridge to I-80, I-580, and I-880, and local roads, serving over 100,000 drivers every day.",
+    "title": "I-80 Bay Bridge On-Ramp and Interchange",
+    "description": "Sea level rise and storm surges can severely disrupt traffic. Several lanes in the complex of on-ramps leading to the Bay Bridge flooded in January 2026 after heavy rains and high King tides raised water levels 2.5 feet above normal.",
     "lat": 37.82647515891506,
     "lon": -122.30071404110357,
-    "image": "images/i80.png"
+    "image": "images/poi/i80.png"
   },
   {
-    "title": "OAK Airport",
-    "description": "In 2022 the Port of Oakland completed a 30 million dollar project to improve the perimeter dike of this airport, providing protection against sea level rise until the year 2060.",
+    "title": "Oakland San Francisco Bay Airport",
+    "description": "OAK Airport has determined that it will be vulnerable to extreme storm surge flooding by 2050–so the airport recently spent $30 million to raise the height of the 4.5 mile dike surrounding the airport. More than 10 million passengers passed through the airport in 2025.",
     "lat": 37.71849494584587,
     "lon": -122.21954606971605,
-    "image": "images/oak.jpg"
+    "image": "images/poi/oak.jpg"
   },
   {
     "title": "Palo Alto Horizontal Levee",
-    "description": "As of 2026, construction on this nature-based levee has begun. It is designed to protect the marsh from sea level rise, act as a wildlife habitat, and filter wastewater.",
+    "description": "The city of Palo Alto is building an innovative way to protect its Harbor Marsh from sea level rise, and treat city wastewater at the same time. It’s called a “horizontal levee”—a wide, gently sloping shoreline covered with native vegetation that can change and grow as sea level rises and filters waste water before it enters the Bay.",
     "lat": 37.45165062776523,
     "lon": -122.10787614282938,
-    "image": "images/levee.jpg"
+    "image": "images/poi/levee.jpg"
   },
   {
     "title": "Suisun Marsh",
-    "description": "This recreational site and wildlife habitat is just downstream of one of California’s largest clean water supplies, making its health important to farmers and residents all over the state.",
+    "description": "This 85,000-acre marsh—California’s largest remaining coastal wetland—supports 200+ bird species, 43 mammals, and many fish. Rising seas may upset its vital balance of fresh and salty water the marsh ecosystem depends on.",
     "lat": 38.18671054108913,
     "lon": -122.06422698541277,
-    "image": "images/suisunmarsh.jpg"
+    "image": "images/poi/suisunmarsh.jpg"
+  },
+  {
+    "title": "The Exploratorium's Outdoor Field Station",
+    "description": "",
+    "lat": 37.80125128242679,
+    "lon": -122.39899476528971,
+    "image": "images/poi/explo.png"
   }
 ]

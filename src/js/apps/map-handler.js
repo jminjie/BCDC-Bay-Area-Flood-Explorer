@@ -967,10 +967,10 @@ define([
             (feature) => {
                 if (feature.imgSrc != null) {
                     return [`<h1>${feature.poiName}</h1>`,
-                        `<body>${feature.description}<br><img style="width:280px;" src="${feature.imgSrc}" /></body>`]
+                        `<body>${feature.description}<br><br><img style="width:280px;" src="${feature.imgSrc}" /></body>`]
                 } else {
                     return [`<h1>${feature.poiName}</h1>`,
-                        `<body>${feature.description}</body>`]
+                        `<body>${feature.description}<br></body>`]
                 }
             },
             null,
