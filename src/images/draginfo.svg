@@ -4,7 +4,7 @@
     <style>
       .cls-1 {
         fill: #000;
-        font-family: Explo-Bold, Explo;
+        font-family: Explo-Bold, Explo, 'Century Gothic', CenturyGothic, Geneva, sans-serif;
         font-size: 46px;
         font-weight: 700;
       }

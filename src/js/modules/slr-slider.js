@@ -359,7 +359,7 @@ define([
             .attr("href", "images/draginfo.svg")
             .attr("width", "300")
             .attr("x", 100)
-            .attr("y", 300)
+            .attr("y", 900)
             .attr("id", "drag-info")
             .attr("opacity", 0)
             .transition()
