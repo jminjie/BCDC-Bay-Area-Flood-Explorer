@@ -1,3 +1,41 @@
+/* Explo font family */
+@font-face {
+  font-family: 'Explo';
+  src: url('../ExploFont/Explo.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Explo';
+  src: url('../ExploFont/Explo-Ita.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Explo';
+  src: url('../ExploFont/Explo-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Explo';
+  src: url('../ExploFont/Explo-LightIta.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Explo';
+  src: url('../ExploFont/Explo-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Explo';
+  src: url('../ExploFont/Explo-BoldIta.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
 /* defaults */
 body {
   background: #f3f3f3;
