@@ -356,9 +356,9 @@ define([
 
     SLRSlider.prototype._drawDragInfo = function() {
         this.dragInfo = this.gBar.append("image")
-            .attr("href", "images/draginfo.svg")
+            .attr("href", "images/draginfo.png")
             .attr("width", "300")
-            .attr("x", 100)
+            .attr("x", 120)
             .attr("y", 900)
             .attr("id", "drag-info")
             .attr("opacity", 0)
